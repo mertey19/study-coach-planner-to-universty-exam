@@ -1,0 +1,330 @@
+{
+  "ogrenciler": {
+    "Ahmet Yilmaz": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "08:00": {
+            "text": "TYT Matematik - Temel Kavramlar | Yayin: 3D",
+            "done": true
+          },
+          "10:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "20:00": {
+            "text": "AYT Fizik - Hareket",
+            "done": false
+          }
+        },
+        "Sali": {
+          "09:00": {
+            "text": "TYT Kimya - Atom",
+            "done": true
+          },
+          "11:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Carsamba": {
+          "07:00": {
+            "text": "TYT Sosyal - Cografya Konum",
+            "done": true
+          }
+        },
+        "Persembe": {},
+        "Cuma": {
+          "19:00": {
+            "text": "AYT Matematik - Trigonometri",
+            "done": false
+          }
+        },
+        "Cumartesi": {
+          "14:00": {
+            "text": "Deneme analizi + yanlislar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "18:00": {
+            "text": "Haftalik ozet ve plan",
+            "done": true
+          }
+        }
+      },
+      "Hafta 2": {
+        "Pazartesi": {
+          "08:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "22:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Sali": {},
+        "Carsamba": {},
+        "Persembe": {},
+        "Cuma": {},
+        "Cumartesi": {},
+        "Pazar": {}
+      }
+    },
+    "Elif Demir": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "09:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "12:00": {
+            "text": "TYT Matematik - Oran Oranti",
+            "done": true
+          }
+        },
+        "Sali": {
+          "08:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Carsamba": {},
+        "Persembe": {},
+        "Cuma": {},
+        "Cumartesi": {},
+        "Pazar": {}
+      }
+    },
+    "Buse Karaca (EA)": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "10:00": {
+            "text": "AYT Matematik - Fonksiyonlar",
+            "done": true
+          }
+        },
+        "Sali": {
+          "20:00": {
+            "text": "AYT Edebiyat-Sos1 - Siir Bilgisi",
+            "done": false
+          }
+        },
+        "Carsamba": {},
+        "Persembe": {
+          "18:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Cuma": {},
+        "Cumartesi": {},
+        "Pazar": {}
+      }
+    },
+    "Canan Aslan (Sozel)": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "09:00": {
+            "text": "AYT Edebiyat-Sos1 - Cumhuriyet Donemi",
+            "done": true
+          }
+        },
+        "Sali": {
+          "17:00": {
+            "text": "AYT Sosyal-2 - Tarih",
+            "done": false
+          }
+        },
+        "Carsamba": {},
+        "Persembe": {},
+        "Cuma": {
+          "19:00": {
+            "text": "TYT Sosyal - Cografya",
+            "done": true
+          }
+        },
+        "Cumartesi": {},
+        "Pazar": {}
+      }
+    }
+  },
+  "ogrenci_notlari": {
+    "Ahmet Yilmaz": "TYT agirlikli gidiyor. Haftada 2 deneme hedefi.",
+    "Elif Demir": "AYT fen guclendirilecek. Turkce neti stabil.",
+    "Buse Karaca (EA)": "EA ogrencisi. AYT Matematik + Edebiyat-Sos1 dengeli ilerliyor.",
+    "Canan Aslan (Sozel)": "Sozel ogrencisi. AYT Sos1/Sos2 netleri odakta."
+  },
+  "denemeler": {
+    "Ahmet Yilmaz": [
+      {
+        "tarih": "2026-01-12",
+        "ad": "TYT-1",
+        "puan": 68,
+        "tur": "TYT",
+        "turkce": 29.5,
+        "mat": 23.0,
+        "fen": 9.5,
+        "sosyal": 13.0
+      },
+      {
+        "tarih": "2026-02-24",
+        "ad": "AYT-2",
+        "puan": 58,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 19.0,
+        "fen": 14.0,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-03-14",
+        "ad": "TYT-4",
+        "puan": 78,
+        "tur": "TYT",
+        "turkce": 33.0,
+        "mat": 28.0,
+        "fen": 11.5,
+        "sosyal": 15.0
+      },
+      {
+        "tarih": "2026-03-19",
+        "ad": "AYT-3",
+        "puan": 61,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 20.5,
+        "fen": 15.0,
+        "sosyal": 0.0
+      }
+    ],
+    "Elif Demir": [
+      {
+        "tarih": "2026-02-18",
+        "ad": "TYT-1",
+        "puan": 66,
+        "tur": "TYT",
+        "turkce": 30.0,
+        "mat": 21.0,
+        "fen": 8.5,
+        "sosyal": 12.0
+      },
+      {
+        "tarih": "2026-03-17",
+        "ad": "AYT-1",
+        "puan": 57,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 18.0,
+        "fen": 13.5,
+        "sosyal": 0.0
+      }
+    ],
+    "Buse Karaca (EA)": [
+      {
+        "tarih": "2026-03-05",
+        "ad": "TYT-1",
+        "puan": 64,
+        "tur": "TYT",
+        "turkce": 31.0,
+        "mat": 20.0,
+        "fen": 7.5,
+        "sosyal": 13.0,
+        "sos1": 0.0,
+        "sos2": 0.0
+      },
+      {
+        "tarih": "2026-03-20",
+        "ad": "AYT-EA-1",
+        "puan": 62,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 24.0,
+        "fen": 3.0,
+        "sosyal": 0.0,
+        "sos1": 18.5,
+        "sos2": 4.0
+      }
+    ],
+    "Canan Aslan (Sozel)": [
+      {
+        "tarih": "2026-03-07",
+        "ad": "TYT-1",
+        "puan": 60,
+        "tur": "TYT",
+        "turkce": 32.5,
+        "mat": 9.0,
+        "fen": 5.0,
+        "sosyal": 18.0,
+        "sos1": 0.0,
+        "sos2": 0.0
+      },
+      {
+        "tarih": "2026-03-22",
+        "ad": "AYT-SOZ-1",
+        "puan": 66,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 4.0,
+        "fen": 2.5,
+        "sosyal": 0.0,
+        "sos1": 26.0,
+        "sos2": 23.5
+      }
+    ]
+  },
+  "konu_verisi": {
+    "TYT": {
+      "Matematik": [
+        "Temel Kavramlar",
+        "Problemler",
+        "Oran Oranti"
+      ],
+      "Turkce": [
+        "Paragraf",
+        "Cumlede Anlam"
+      ],
+      "Fizik": [
+        "Hareket"
+      ],
+      "Kimya": [
+        "Atom"
+      ],
+      "Biyoloji": [
+        "Hucre"
+      ],
+      "Geometri": [
+        "Ucgenler"
+      ],
+      "Cografya": [
+        "Cografi Konum"
+      ]
+    },
+    "AYT": {
+      "Matematik": [
+        "Trigonometri",
+        "Turev"
+      ],
+      "Fizik": [
+        "Hareket",
+        "Elektrik"
+      ],
+      "Kimya": [
+        "Gazlar"
+      ],
+      "Biyoloji": [
+        "Sinir Sistemi"
+      ]
+    },
+    "5. Sınıf": {},
+    "6. Sınıf": {},
+    "7. Sınıf": {},
+    "8. Sınıf": {},
+    "9. Sınıf": {},
+    "10. Sınıf": {},
+    "11. Sınıf": {},
+    "12. Sınıf": {}
+  },
+  "aktif_ogrenci": "Ahmet Yilmaz",
+  "aktif_hafta": "Hafta 1"
+}

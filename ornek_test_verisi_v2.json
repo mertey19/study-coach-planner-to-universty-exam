@@ -1,0 +1,6189 @@
+{
+  "ogrenciler": {
+    "Ogrenci 01": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "07:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "04:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "01:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "16:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "19:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 2": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "22:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "08:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "00:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "08:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "04:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "02:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "12:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 3": {
+        "Pazartesi": {
+          "08:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "01:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "12:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "02:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "06:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "22:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "09:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "02:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        }
+      },
+      "Hafta 4": {
+        "Pazartesi": {
+          "08:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "14:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "06:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "21:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "20:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "05:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "08:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "20:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 5": {
+        "Pazartesi": {
+          "01:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "07:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "08:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "02:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "20:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "15:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "08:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "04:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 6": {
+        "Pazartesi": {
+          "18:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "13:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "04:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "16:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "04:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "02:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "12:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 7": {
+        "Pazartesi": {
+          "08:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "17:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "17:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "08:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "05:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "14:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "16:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "05:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 8": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "16:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "05:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "17:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "00:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "01:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "07:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 9": {
+        "Pazartesi": {
+          "02:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "17:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "17:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "05:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "06:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "17:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "21:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "20:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        }
+      },
+      "Hafta 10": {
+        "Pazartesi": {
+          "07:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "02:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "07:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "00:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "02:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "01:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "21:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "15:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        }
+      },
+      "Hafta 11": {
+        "Pazartesi": {
+          "18:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "15:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "13:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "06:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "14:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "12:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "23:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        }
+      },
+      "Hafta 12": {
+        "Pazartesi": {
+          "06:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "17:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "08:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "14:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "17:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "03:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "02:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "07:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        }
+      }
+    },
+    "Ogrenci 02": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "22:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "10:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "21:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "20:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "02:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "00:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "17:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "06:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 2": {
+        "Pazartesi": {
+          "02:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "07:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "17:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "22:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "17:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "09:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "23:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 3": {
+        "Pazartesi": {
+          "06:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "22:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "15:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "08:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "08:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "01:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "08:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "05:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 4": {
+        "Pazartesi": {
+          "00:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "01:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "11:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "09:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "11:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "21:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "07:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 5": {
+        "Pazartesi": {
+          "19:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "23:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "05:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "13:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "21:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "22:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "03:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 6": {
+        "Pazartesi": {
+          "15:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "07:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "09:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "07:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "10:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "08:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "20:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "16:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 7": {
+        "Pazartesi": {
+          "00:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "03:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "19:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "19:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "16:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "01:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "22:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        }
+      },
+      "Hafta 8": {
+        "Pazartesi": {
+          "13:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "02:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "23:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "10:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "04:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "06:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 9": {
+        "Pazartesi": {
+          "23:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "05:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "09:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "06:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "14:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "21:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "23:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "05:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        }
+      },
+      "Hafta 10": {
+        "Pazartesi": {
+          "07:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "21:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "00:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "01:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "02:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "14:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "22:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "12:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        }
+      },
+      "Hafta 11": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "22:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "13:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "07:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "17:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "07:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "14:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "21:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 12": {
+        "Pazartesi": {
+          "23:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "16:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "05:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "23:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "07:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "20:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "07:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "08:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        }
+      }
+    },
+    "Ogrenci 03": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "21:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "00:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "14:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "05:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "06:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "14:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "13:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "08:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 2": {
+        "Pazartesi": {
+          "17:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "01:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "20:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "01:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "00:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "19:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "21:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 3": {
+        "Pazartesi": {
+          "11:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "05:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "09:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "21:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "12:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "18:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "22:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 4": {
+        "Pazartesi": {
+          "21:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "19:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "17:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "13:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "15:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "14:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "22:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        }
+      },
+      "Hafta 5": {
+        "Pazartesi": {
+          "16:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "20:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "13:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "23:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "02:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "08:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "19:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "21:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        }
+      },
+      "Hafta 6": {
+        "Pazartesi": {
+          "10:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "05:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "08:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "10:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "00:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "16:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "13:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "15:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 7": {
+        "Pazartesi": {
+          "22:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "15:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "09:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "07:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "21:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "18:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "23:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "17:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        }
+      },
+      "Hafta 8": {
+        "Pazartesi": {
+          "09:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "08:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "23:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "15:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "08:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "06:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "09:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        }
+      },
+      "Hafta 9": {
+        "Pazartesi": {
+          "00:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "22:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "01:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "17:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "15:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "15:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "14:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        }
+      },
+      "Hafta 10": {
+        "Pazartesi": {
+          "15:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "03:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "18:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "20:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "18:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "09:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "17:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "13:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        }
+      },
+      "Hafta 11": {
+        "Pazartesi": {
+          "14:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "09:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "23:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "03:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "21:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "02:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "02:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "05:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 12": {
+        "Pazartesi": {
+          "19:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "15:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "22:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "09:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "08:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "20:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "07:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "20:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      }
+    },
+    "Ogrenci 04": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "13:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "10:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "05:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "10:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "21:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "12:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "08:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "10:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 2": {
+        "Pazartesi": {
+          "16:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "00:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "16:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "11:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "01:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "06:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "09:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "14:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 3": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "19:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "17:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "00:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "03:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "14:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "22:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "09:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 4": {
+        "Pazartesi": {
+          "15:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "07:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "06:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "19:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "10:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "23:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "09:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        }
+      },
+      "Hafta 5": {
+        "Pazartesi": {
+          "17:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "15:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "10:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "06:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "01:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "12:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "21:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        }
+      },
+      "Hafta 6": {
+        "Pazartesi": {
+          "16:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "18:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "14:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "20:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "04:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "19:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "22:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        }
+      },
+      "Hafta 7": {
+        "Pazartesi": {
+          "10:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "21:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "22:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "15:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "20:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "21:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "02:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "13:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        }
+      },
+      "Hafta 8": {
+        "Pazartesi": {
+          "05:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "22:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "10:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "01:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "04:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "07:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "05:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "02:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        }
+      },
+      "Hafta 9": {
+        "Pazartesi": {
+          "18:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "04:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "08:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "21:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "09:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "21:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "11:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "18:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 10": {
+        "Pazartesi": {
+          "08:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "14:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "15:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "03:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "09:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "22:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "00:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "18:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 11": {
+        "Pazartesi": {
+          "09:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "07:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "08:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "21:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "20:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "01:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "18:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "11:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        }
+      },
+      "Hafta 12": {
+        "Pazartesi": {
+          "23:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "13:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "17:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "11:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "15:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "09:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "02:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "04:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      }
+    },
+    "Ogrenci 05": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "13:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "20:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "13:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "08:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "14:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "07:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "20:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "11:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        }
+      },
+      "Hafta 2": {
+        "Pazartesi": {
+          "03:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "14:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "20:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "19:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "04:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "18:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "06:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "07:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        }
+      },
+      "Hafta 3": {
+        "Pazartesi": {
+          "19:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "00:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "04:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "17:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "21:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "00:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "07:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "18:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        }
+      },
+      "Hafta 4": {
+        "Pazartesi": {
+          "01:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "04:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "02:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "15:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "18:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "03:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "19:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "01:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        }
+      },
+      "Hafta 5": {
+        "Pazartesi": {
+          "15:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "12:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "22:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "14:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "19:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "04:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "20:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "18:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        }
+      },
+      "Hafta 6": {
+        "Pazartesi": {
+          "16:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "19:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "20:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "17:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "07:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "13:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "13:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "23:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        }
+      },
+      "Hafta 7": {
+        "Pazartesi": {
+          "21:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "08:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "15:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "02:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "01:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "18:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        }
+      },
+      "Hafta 8": {
+        "Pazartesi": {
+          "11:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "21:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "09:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "19:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "16:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "06:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "03:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "11:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 9": {
+        "Pazartesi": {
+          "07:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "13:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "05:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "08:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "00:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "05:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "04:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "23:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        }
+      },
+      "Hafta 10": {
+        "Pazartesi": {
+          "13:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "14:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "23:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "10:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "05:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "19:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "14:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "21:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        }
+      },
+      "Hafta 11": {
+        "Pazartesi": {
+          "08:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "06:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "09:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "21:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "07:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "12:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "06:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "04:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        }
+      },
+      "Hafta 12": {
+        "Pazartesi": {
+          "00:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "15:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "17:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "22:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "12:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "23:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "02:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "10:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      }
+    },
+    "Ogrenci 06": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "19:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "14:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "02:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "08:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "18:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "14:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "01:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        }
+      },
+      "Hafta 2": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "02:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "18:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "20:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "04:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "01:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "22:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "02:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 3": {
+        "Pazartesi": {
+          "14:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "16:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "09:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "12:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "19:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "01:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "17:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "21:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 4": {
+        "Pazartesi": {
+          "21:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "19:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "21:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "04:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "19:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "22:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "10:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "04:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 5": {
+        "Pazartesi": {
+          "11:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "00:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "06:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "10:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "04:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "02:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "17:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "23:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 6": {
+        "Pazartesi": {
+          "19:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "04:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "22:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "19:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "11:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "09:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "23:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        }
+      },
+      "Hafta 7": {
+        "Pazartesi": {
+          "15:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "06:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "09:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "12:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "06:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "19:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "20:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "15:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        }
+      },
+      "Hafta 8": {
+        "Pazartesi": {
+          "16:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "14:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "16:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "07:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "14:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "01:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "12:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 9": {
+        "Pazartesi": {
+          "02:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "11:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "03:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "22:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "01:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "09:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "22:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "15:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 10": {
+        "Pazartesi": {
+          "02:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "00:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "23:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "19:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "09:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "03:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "19:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "14:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 11": {
+        "Pazartesi": {
+          "17:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "00:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "13:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "00:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "21:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "02:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "15:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "01:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        }
+      },
+      "Hafta 12": {
+        "Pazartesi": {
+          "23:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "00:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "07:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "23:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "01:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "11:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "21:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "14:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        }
+      }
+    },
+    "Ogrenci 07": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "02:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "10:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "22:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "13:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "14:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "01:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "20:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "01:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        }
+      },
+      "Hafta 2": {
+        "Pazartesi": {
+          "16:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "23:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "19:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "21:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "07:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "20:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "18:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "01:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 3": {
+        "Pazartesi": {
+          "11:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "14:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "11:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "12:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "00:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "17:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 4": {
+        "Pazartesi": {
+          "14:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "06:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "03:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "04:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "22:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "14:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "11:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "22:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 5": {
+        "Pazartesi": {
+          "09:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "05:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "07:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "15:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "00:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "17:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "04:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        }
+      },
+      "Hafta 6": {
+        "Pazartesi": {
+          "22:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "23:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "13:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "18:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "02:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "14:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "17:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "20:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        }
+      },
+      "Hafta 7": {
+        "Pazartesi": {
+          "16:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "01:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "05:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "10:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "02:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "08:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "20:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "09:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        }
+      },
+      "Hafta 8": {
+        "Pazartesi": {
+          "18:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "04:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "18:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "01:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "20:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "18:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "18:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "13:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 9": {
+        "Pazartesi": {
+          "09:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "15:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "14:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "02:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "15:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "14:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "22:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "10:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        }
+      },
+      "Hafta 10": {
+        "Pazartesi": {
+          "11:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "16:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "03:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "08:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "01:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "09:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "05:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "10:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        }
+      },
+      "Hafta 11": {
+        "Pazartesi": {
+          "16:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "14:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "00:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "02:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "07:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "06:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "15:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "19:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 12": {
+        "Pazartesi": {
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "13:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "11:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "12:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "18:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "17:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "12:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "16:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      }
+    },
+    "Ogrenci 08": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "18:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "15:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "05:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "18:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "22:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "10:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "13:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        }
+      },
+      "Hafta 2": {
+        "Pazartesi": {
+          "16:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "19:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "04:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "16:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "21:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "15:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "17:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "10:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 3": {
+        "Pazartesi": {
+          "15:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "06:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "09:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "22:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "15:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "11:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "21:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "17:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 4": {
+        "Pazartesi": {
+          "11:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "04:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "22:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "02:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "08:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "23:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "17:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "08:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        }
+      },
+      "Hafta 5": {
+        "Pazartesi": {
+          "23:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "18:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "16:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "07:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "10:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "22:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "17:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "05:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        }
+      },
+      "Hafta 6": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "06:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "01:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "02:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "05:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "13:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "12:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "15:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 7": {
+        "Pazartesi": {
+          "01:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "00:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "10:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "09:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "04:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "16:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "10:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 8": {
+        "Pazartesi": {
+          "08:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "22:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "09:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "18:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "16:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "05:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 9": {
+        "Pazartesi": {
+          "07:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "00:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "08:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "10:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "20:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "11:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "09:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "05:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 10": {
+        "Pazartesi": {
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "20:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "04:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "15:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "22:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "17:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "07:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "21:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 11": {
+        "Pazartesi": {
+          "22:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "11:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "17:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "16:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "10:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "16:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "18:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "15:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 12": {
+        "Pazartesi": {
+          "01:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "14:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "18:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "01:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "00:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "12:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "06:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "18:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        }
+      }
+    },
+    "Ogrenci 09": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "03:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "01:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "06:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "02:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "19:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "21:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "14:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "07:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        }
+      },
+      "Hafta 2": {
+        "Pazartesi": {
+          "16:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "09:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "19:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "21:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "04:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "21:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "01:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "17:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 3": {
+        "Pazartesi": {
+          "15:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "01:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "16:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "10:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "12:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "05:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "22:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "04:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 4": {
+        "Pazartesi": {
+          "13:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "17:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "06:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "10:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "11:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "02:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "21:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "19:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        }
+      },
+      "Hafta 5": {
+        "Pazartesi": {
+          "18:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "23:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "10:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "09:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "23:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "03:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "19:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "22:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 6": {
+        "Pazartesi": {
+          "10:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "09:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "08:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "11:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "23:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "15:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "10:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "13:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 7": {
+        "Pazartesi": {
+          "04:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "00:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "04:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "06:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "07:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "15:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "23:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "20:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        }
+      },
+      "Hafta 8": {
+        "Pazartesi": {
+          "11:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "05:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "17:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "20:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "02:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "21:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "04:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "20:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        }
+      },
+      "Hafta 9": {
+        "Pazartesi": {
+          "06:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "16:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "20:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "21:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "00:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "17:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "23:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "08:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 10": {
+        "Pazartesi": {
+          "05:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "06:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "19:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "12:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "02:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "18:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "07:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          }
+        }
+      },
+      "Hafta 11": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "01:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "17:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "15:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "05:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "02:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "10:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "18:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        }
+      },
+      "Hafta 12": {
+        "Pazartesi": {
+          "06:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "22:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "02:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "21:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "10:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "00:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "22:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "12:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        }
+      }
+    },
+    "Ogrenci 10": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "03:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "02:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "11:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "08:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "14:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "11:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "17:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 2": {
+        "Pazartesi": {
+          "12:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "00:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "02:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          },
+          "23:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "12:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "05:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "15:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "04:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        }
+      },
+      "Hafta 3": {
+        "Pazartesi": {
+          "13:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "09:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "08:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "07:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "04:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "19:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "12:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        }
+      },
+      "Hafta 4": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "19:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "22:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "06:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "12:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          },
+          "10:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "18:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "07:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 5": {
+        "Pazartesi": {
+          "12:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "11:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "17:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          },
+          "05:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "22:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "06:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "22:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "02:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        }
+      },
+      "Hafta 6": {
+        "Pazartesi": {
+          "20:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "09:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "13:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "12:00": {
+            "text": "Deneme analizi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "12:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "17:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "11:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "22:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 7": {
+        "Pazartesi": {
+          "21:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "11:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "20:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "21:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "13:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          },
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "16:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "23:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        }
+      },
+      "Hafta 8": {
+        "Pazartesi": {
+          "14:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "21:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "03:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "09:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "23:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          },
+          "04:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "06:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "16:00": {
+            "text": "Deneme analizi",
+            "done": false
+          }
+        }
+      },
+      "Hafta 9": {
+        "Pazartesi": {
+          "14:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "23:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "01:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "22:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "03:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "21:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "05:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          },
+          "17:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        }
+      },
+      "Hafta 10": {
+        "Pazartesi": {
+          "14:00": {
+            "text": "Genel tekrar",
+            "done": true
+          },
+          "07:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "20:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "21:00": {
+            "text": "TYT Matematik - Problemler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "19:00": {
+            "text": "Deneme analizi",
+            "done": true
+          },
+          "06:00": {
+            "text": "Genel tekrar",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "00:00": {
+            "text": "AYT Kimya - Gazlar",
+            "done": false
+          },
+          "22:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        }
+      },
+      "Hafta 11": {
+        "Pazartesi": {
+          "22:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "02:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Çarşamba": {
+          "10:00": {
+            "text": "Deneme analizi",
+            "done": false
+          },
+          "06:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Cuma": {
+          "15:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          },
+          "16:00": {
+            "text": "Genel tekrar",
+            "done": true
+          }
+        },
+        "Pazar": {
+          "12:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": false
+          },
+          "18:00": {
+            "text": "AYT Biyoloji - Sinir Sistemi",
+            "done": true
+          }
+        }
+      },
+      "Hafta 12": {
+        "Pazartesi": {
+          "14:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          },
+          "19:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": true
+          }
+        },
+        "Çarşamba": {
+          "19:00": {
+            "text": "TYT Turkce - Paragraf",
+            "done": true
+          },
+          "18:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Cuma": {
+          "03:00": {
+            "text": "TYT Geometri - Ucgenler",
+            "done": false
+          },
+          "07:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": false
+          }
+        },
+        "Pazar": {
+          "22:00": {
+            "text": "Genel tekrar",
+            "done": false
+          },
+          "04:00": {
+            "text": "AYT Fizik - Elektrik",
+            "done": true
+          }
+        }
+      }
+    },
+    "Ogrenci 11 (EA)": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "10:00": {
+            "text": "AYT Matematik - Fonksiyonlar",
+            "done": true
+          }
+        },
+        "Sali": {
+          "19:00": {
+            "text": "AYT Edebiyat-Sos1 - Paragraf yorumu",
+            "done": false
+          }
+        },
+        "Çarşamba": {},
+        "Persembe": {},
+        "Cuma": {
+          "21:00": {
+            "text": "TYT Turkce - Dil Bilgisi",
+            "done": true
+          }
+        },
+        "Cumartesi": {},
+        "Pazar": {}
+      }
+    },
+    "Ogrenci 12 (Sozel)": {
+      "Hafta 1": {
+        "Pazartesi": {
+          "09:00": {
+            "text": "AYT Edebiyat-Sos1 - Edebi Donemler",
+            "done": true
+          }
+        },
+        "Sali": {
+          "18:00": {
+            "text": "AYT Sosyal-2 - Tarih",
+            "done": false
+          }
+        },
+        "Çarşamba": {},
+        "Persembe": {},
+        "Cuma": {
+          "20:00": {
+            "text": "TYT Sosyal - Cografya",
+            "done": true
+          }
+        },
+        "Cumartesi": {},
+        "Pazar": {}
+      }
+    }
+  },
+  "ogrenci_notlari": {
+    "Ogrenci 01": "Ogrenci 01 icin test notu: TYT ve AYT dengeli ilerliyor.",
+    "Ogrenci 02": "Ogrenci 02 icin test notu: TYT ve AYT dengeli ilerliyor.",
+    "Ogrenci 03": "Ogrenci 03 icin test notu: TYT ve AYT dengeli ilerliyor.",
+    "Ogrenci 04": "Ogrenci 04 icin test notu: TYT ve AYT dengeli ilerliyor.",
+    "Ogrenci 05": "Ogrenci 05 icin test notu: TYT ve AYT dengeli ilerliyor.",
+    "Ogrenci 06": "Ogrenci 06 icin test notu: TYT ve AYT dengeli ilerliyor.",
+    "Ogrenci 07": "Ogrenci 07 icin test notu: TYT ve AYT dengeli ilerliyor.",
+    "Ogrenci 08": "Ogrenci 08 icin test notu: TYT ve AYT dengeli ilerliyor.",
+    "Ogrenci 09": "Ogrenci 09 icin test notu: TYT ve AYT dengeli ilerliyor.",
+    "Ogrenci 10": "Ogrenci 10 icin test notu: TYT ve AYT dengeli ilerliyor.",
+    "Ogrenci 11 (EA)": "EA odakli profil: AYT Mat + Edebiyat-Sos1 takipte.",
+    "Ogrenci 12 (Sozel)": "Sozel odakli profil: AYT Sos1/Sos2 net trendi takipte."
+  },
+  "denemeler": {
+    "Ogrenci 01": [
+      {
+        "tarih": "2026-01-17",
+        "ad": "TYT-1",
+        "puan": 58,
+        "tur": "TYT",
+        "turkce": 33.0,
+        "mat": 33.0,
+        "fen": 10.5,
+        "sosyal": 10.0
+      },
+      {
+        "tarih": "2026-01-28",
+        "ad": "TYT-2",
+        "puan": 63,
+        "tur": "TYT",
+        "turkce": 24.0,
+        "mat": 30.7,
+        "fen": 14.8,
+        "sosyal": 15.1
+      },
+      {
+        "tarih": "2026-02-08",
+        "ad": "AYT-3",
+        "puan": 66,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 18.1,
+        "fen": 12.5,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-02-19",
+        "ad": "TYT-4",
+        "puan": 61,
+        "tur": "TYT",
+        "turkce": 28.7,
+        "mat": 25.8,
+        "fen": 19.2,
+        "sosyal": 10.7
+      },
+      {
+        "tarih": "2026-03-02",
+        "ad": "TYT-5",
+        "puan": 70,
+        "tur": "TYT",
+        "turkce": 27.5,
+        "mat": 32.1,
+        "fen": 10.4,
+        "sosyal": 21.5
+      },
+      {
+        "tarih": "2026-03-13",
+        "ad": "AYT-6",
+        "puan": 66,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 32.0,
+        "fen": 9.0,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-03-24",
+        "ad": "TYT-7",
+        "puan": 68,
+        "tur": "TYT",
+        "turkce": 30.1,
+        "mat": 19.7,
+        "fen": 9.8,
+        "sosyal": 20.7
+      },
+      {
+        "tarih": "2026-04-04",
+        "ad": "TYT-8",
+        "puan": 72,
+        "tur": "TYT",
+        "turkce": 28.7,
+        "mat": 15.8,
+        "fen": 9.2,
+        "sosyal": 17.9
+      },
+      {
+        "tarih": "2026-04-15",
+        "ad": "AYT-9",
+        "puan": 76,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 33.7,
+        "fen": 11.1,
+        "sosyal": 0.0
+      }
+    ],
+    "Ogrenci 02": [
+      {
+        "tarih": "2026-01-18",
+        "ad": "TYT-1",
+        "puan": 60,
+        "tur": "TYT",
+        "turkce": 25.0,
+        "mat": 32.9,
+        "fen": 9.2,
+        "sosyal": 11.8
+      },
+      {
+        "tarih": "2026-01-29",
+        "ad": "TYT-2",
+        "puan": 64,
+        "tur": "TYT",
+        "turkce": 30.4,
+        "mat": 29.1,
+        "fen": 9.0,
+        "sosyal": 14.9
+      },
+      {
+        "tarih": "2026-02-09",
+        "ad": "AYT-3",
+        "puan": 67,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 23.3,
+        "fen": 11.1,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-02-20",
+        "ad": "TYT-4",
+        "puan": 68,
+        "tur": "TYT",
+        "turkce": 25.8,
+        "mat": 30.4,
+        "fen": 22.2,
+        "sosyal": 10.2
+      },
+      {
+        "tarih": "2026-03-03",
+        "ad": "TYT-5",
+        "puan": 70,
+        "tur": "TYT",
+        "turkce": 27.2,
+        "mat": 33.9,
+        "fen": 12.5,
+        "sosyal": 14.7
+      },
+      {
+        "tarih": "2026-03-14",
+        "ad": "AYT-6",
+        "puan": 72,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 25.8,
+        "fen": 19.0,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-03-25",
+        "ad": "TYT-7",
+        "puan": 71,
+        "tur": "TYT",
+        "turkce": 27.3,
+        "mat": 20.5,
+        "fen": 15.3,
+        "sosyal": 14.7
+      },
+      {
+        "tarih": "2026-04-05",
+        "ad": "TYT-8",
+        "puan": 76,
+        "tur": "TYT",
+        "turkce": 30.9,
+        "mat": 31.8,
+        "fen": 21.8,
+        "sosyal": 21.8
+      },
+      {
+        "tarih": "2026-04-16",
+        "ad": "AYT-9",
+        "puan": 72,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 33.1,
+        "fen": 16.9,
+        "sosyal": 0.0
+      }
+    ],
+    "Ogrenci 03": [
+      {
+        "tarih": "2026-01-19",
+        "ad": "TYT-1",
+        "puan": 59,
+        "tur": "TYT",
+        "turkce": 21.1,
+        "mat": 18.3,
+        "fen": 12.6,
+        "sosyal": 19.0
+      },
+      {
+        "tarih": "2026-01-30",
+        "ad": "TYT-2",
+        "puan": 63,
+        "tur": "TYT",
+        "turkce": 26.6,
+        "mat": 24.4,
+        "fen": 12.6,
+        "sosyal": 14.8
+      },
+      {
+        "tarih": "2026-02-10",
+        "ad": "AYT-3",
+        "puan": 65,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 25.0,
+        "fen": 15.4,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-02-21",
+        "ad": "TYT-4",
+        "puan": 64,
+        "tur": "TYT",
+        "turkce": 29.0,
+        "mat": 32.8,
+        "fen": 19.0,
+        "sosyal": 17.2
+      },
+      {
+        "tarih": "2026-03-04",
+        "ad": "TYT-5",
+        "puan": 65,
+        "tur": "TYT",
+        "turkce": 21.4,
+        "mat": 34.2,
+        "fen": 20.5,
+        "sosyal": 16.9
+      },
+      {
+        "tarih": "2026-03-15",
+        "ad": "AYT-6",
+        "puan": 67,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 35.0,
+        "fen": 18.1,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-03-26",
+        "ad": "TYT-7",
+        "puan": 73,
+        "tur": "TYT",
+        "turkce": 28.6,
+        "mat": 30.3,
+        "fen": 10.6,
+        "sosyal": 16.2
+      },
+      {
+        "tarih": "2026-04-06",
+        "ad": "TYT-8",
+        "puan": 78,
+        "tur": "TYT",
+        "turkce": 33.7,
+        "mat": 18.6,
+        "fen": 16.8,
+        "sosyal": 17.6
+      },
+      {
+        "tarih": "2026-04-17",
+        "ad": "AYT-9",
+        "puan": 80,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 34.4,
+        "fen": 15.1,
+        "sosyal": 0.0
+      }
+    ],
+    "Ogrenci 04": [
+      {
+        "tarih": "2026-01-20",
+        "ad": "TYT-1",
+        "puan": 63,
+        "tur": "TYT",
+        "turkce": 21.4,
+        "mat": 22.9,
+        "fen": 12.0,
+        "sosyal": 11.5
+      },
+      {
+        "tarih": "2026-01-31",
+        "ad": "TYT-2",
+        "puan": 65,
+        "tur": "TYT",
+        "turkce": 30.1,
+        "mat": 28.4,
+        "fen": 16.8,
+        "sosyal": 19.9
+      },
+      {
+        "tarih": "2026-02-11",
+        "ad": "AYT-3",
+        "puan": 67,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 17.2,
+        "fen": 11.5,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-02-22",
+        "ad": "TYT-4",
+        "puan": 64,
+        "tur": "TYT",
+        "turkce": 29.3,
+        "mat": 33.9,
+        "fen": 12.9,
+        "sosyal": 17.3
+      },
+      {
+        "tarih": "2026-03-05",
+        "ad": "TYT-5",
+        "puan": 67,
+        "tur": "TYT",
+        "turkce": 29.5,
+        "mat": 24.3,
+        "fen": 18.5,
+        "sosyal": 17.8
+      },
+      {
+        "tarih": "2026-03-16",
+        "ad": "AYT-6",
+        "puan": 69,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 17.8,
+        "fen": 22.2,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-03-27",
+        "ad": "TYT-7",
+        "puan": 74,
+        "tur": "TYT",
+        "turkce": 34.9,
+        "mat": 17.3,
+        "fen": 11.5,
+        "sosyal": 16.5
+      },
+      {
+        "tarih": "2026-04-07",
+        "ad": "TYT-8",
+        "puan": 78,
+        "tur": "TYT",
+        "turkce": 26.8,
+        "mat": 28.4,
+        "fen": 19.1,
+        "sosyal": 21.4
+      },
+      {
+        "tarih": "2026-04-18",
+        "ad": "AYT-9",
+        "puan": 80,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 26.7,
+        "fen": 18.9,
+        "sosyal": 0.0
+      }
+    ],
+    "Ogrenci 05": [
+      {
+        "tarih": "2026-01-21",
+        "ad": "TYT-1",
+        "puan": 65,
+        "tur": "TYT",
+        "turkce": 24.3,
+        "mat": 23.1,
+        "fen": 22.5,
+        "sosyal": 12.1
+      },
+      {
+        "tarih": "2026-02-01",
+        "ad": "TYT-2",
+        "puan": 68,
+        "tur": "TYT",
+        "turkce": 32.5,
+        "mat": 33.4,
+        "fen": 9.3,
+        "sosyal": 20.1
+      },
+      {
+        "tarih": "2026-02-12",
+        "ad": "AYT-3",
+        "puan": 66,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 23.7,
+        "fen": 14.0,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-02-23",
+        "ad": "TYT-4",
+        "puan": 66,
+        "tur": "TYT",
+        "turkce": 25.9,
+        "mat": 21.2,
+        "fen": 13.1,
+        "sosyal": 14.0
+      },
+      {
+        "tarih": "2026-03-06",
+        "ad": "TYT-5",
+        "puan": 69,
+        "tur": "TYT",
+        "turkce": 21.1,
+        "mat": 27.7,
+        "fen": 16.0,
+        "sosyal": 12.3
+      },
+      {
+        "tarih": "2026-03-17",
+        "ad": "AYT-6",
+        "puan": 74,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 22.0,
+        "fen": 22.4,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-03-28",
+        "ad": "TYT-7",
+        "puan": 73,
+        "tur": "TYT",
+        "turkce": 23.5,
+        "mat": 17.9,
+        "fen": 11.0,
+        "sosyal": 17.2
+      },
+      {
+        "tarih": "2026-04-08",
+        "ad": "TYT-8",
+        "puan": 74,
+        "tur": "TYT",
+        "turkce": 22.7,
+        "mat": 30.5,
+        "fen": 15.4,
+        "sosyal": 19.1
+      },
+      {
+        "tarih": "2026-04-19",
+        "ad": "AYT-9",
+        "puan": 82,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 28.6,
+        "fen": 21.2,
+        "sosyal": 0.0
+      }
+    ],
+    "Ogrenci 06": [
+      {
+        "tarih": "2026-01-22",
+        "ad": "TYT-1",
+        "puan": 62,
+        "tur": "TYT",
+        "turkce": 20.9,
+        "mat": 30.5,
+        "fen": 14.9,
+        "sosyal": 13.5
+      },
+      {
+        "tarih": "2026-02-02",
+        "ad": "TYT-2",
+        "puan": 62,
+        "tur": "TYT",
+        "turkce": 31.9,
+        "mat": 32.7,
+        "fen": 12.7,
+        "sosyal": 13.7
+      },
+      {
+        "tarih": "2026-02-13",
+        "ad": "AYT-3",
+        "puan": 70,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 34.8,
+        "fen": 16.1,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-02-24",
+        "ad": "TYT-4",
+        "puan": 70,
+        "tur": "TYT",
+        "turkce": 20.5,
+        "mat": 27.9,
+        "fen": 12.3,
+        "sosyal": 20.3
+      },
+      {
+        "tarih": "2026-03-07",
+        "ad": "TYT-5",
+        "puan": 68,
+        "tur": "TYT",
+        "turkce": 33.0,
+        "mat": 21.6,
+        "fen": 9.9,
+        "sosyal": 14.4
+      },
+      {
+        "tarih": "2026-03-18",
+        "ad": "AYT-6",
+        "puan": 76,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 29.9,
+        "fen": 21.4,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-03-29",
+        "ad": "TYT-7",
+        "puan": 78,
+        "tur": "TYT",
+        "turkce": 25.1,
+        "mat": 18.7,
+        "fen": 18.4,
+        "sosyal": 14.4
+      },
+      {
+        "tarih": "2026-04-09",
+        "ad": "TYT-8",
+        "puan": 78,
+        "tur": "TYT",
+        "turkce": 32.0,
+        "mat": 29.5,
+        "fen": 9.2,
+        "sosyal": 17.2
+      },
+      {
+        "tarih": "2026-04-20",
+        "ad": "AYT-9",
+        "puan": 78,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 25.9,
+        "fen": 12.8,
+        "sosyal": 0.0
+      }
+    ],
+    "Ogrenci 07": [
+      {
+        "tarih": "2026-01-23",
+        "ad": "TYT-1",
+        "puan": 62,
+        "tur": "TYT",
+        "turkce": 21.9,
+        "mat": 16.9,
+        "fen": 13.6,
+        "sosyal": 21.8
+      },
+      {
+        "tarih": "2026-02-03",
+        "ad": "TYT-2",
+        "puan": 68,
+        "tur": "TYT",
+        "turkce": 31.3,
+        "mat": 19.0,
+        "fen": 15.6,
+        "sosyal": 16.0
+      },
+      {
+        "tarih": "2026-02-14",
+        "ad": "AYT-3",
+        "puan": 65,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 15.8,
+        "fen": 18.7,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-02-25",
+        "ad": "TYT-4",
+        "puan": 74,
+        "tur": "TYT",
+        "turkce": 27.8,
+        "mat": 18.0,
+        "fen": 21.4,
+        "sosyal": 11.7
+      },
+      {
+        "tarih": "2026-03-08",
+        "ad": "TYT-5",
+        "puan": 74,
+        "tur": "TYT",
+        "turkce": 22.4,
+        "mat": 34.8,
+        "fen": 19.1,
+        "sosyal": 13.6
+      },
+      {
+        "tarih": "2026-03-19",
+        "ad": "AYT-6",
+        "puan": 76,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 25.1,
+        "fen": 15.6,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-03-30",
+        "ad": "TYT-7",
+        "puan": 80,
+        "tur": "TYT",
+        "turkce": 30.6,
+        "mat": 21.0,
+        "fen": 20.2,
+        "sosyal": 14.4
+      },
+      {
+        "tarih": "2026-04-10",
+        "ad": "TYT-8",
+        "puan": 76,
+        "tur": "TYT",
+        "turkce": 34.7,
+        "mat": 26.7,
+        "fen": 20.0,
+        "sosyal": 18.7
+      },
+      {
+        "tarih": "2026-04-21",
+        "ad": "AYT-9",
+        "puan": 77,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 26.9,
+        "fen": 12.0,
+        "sosyal": 0.0
+      }
+    ],
+    "Ogrenci 08": [
+      {
+        "tarih": "2026-01-24",
+        "ad": "TYT-1",
+        "puan": 63,
+        "tur": "TYT",
+        "turkce": 28.1,
+        "mat": 16.2,
+        "fen": 21.4,
+        "sosyal": 21.8
+      },
+      {
+        "tarih": "2026-02-04",
+        "ad": "TYT-2",
+        "puan": 71,
+        "tur": "TYT",
+        "turkce": 20.5,
+        "mat": 23.2,
+        "fen": 19.5,
+        "sosyal": 19.2
+      },
+      {
+        "tarih": "2026-02-15",
+        "ad": "AYT-3",
+        "puan": 72,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 22.5,
+        "fen": 21.4,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-02-26",
+        "ad": "TYT-4",
+        "puan": 75,
+        "tur": "TYT",
+        "turkce": 33.0,
+        "mat": 33.1,
+        "fen": 13.6,
+        "sosyal": 18.2
+      },
+      {
+        "tarih": "2026-03-09",
+        "ad": "TYT-5",
+        "puan": 72,
+        "tur": "TYT",
+        "turkce": 29.8,
+        "mat": 22.0,
+        "fen": 10.7,
+        "sosyal": 16.4
+      },
+      {
+        "tarih": "2026-03-20",
+        "ad": "AYT-6",
+        "puan": 74,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 29.6,
+        "fen": 11.3,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-03-31",
+        "ad": "TYT-7",
+        "puan": 74,
+        "tur": "TYT",
+        "turkce": 31.3,
+        "mat": 34.6,
+        "fen": 14.9,
+        "sosyal": 18.6
+      },
+      {
+        "tarih": "2026-04-11",
+        "ad": "TYT-8",
+        "puan": 82,
+        "tur": "TYT",
+        "turkce": 28.0,
+        "mat": 31.5,
+        "fen": 11.7,
+        "sosyal": 14.2
+      },
+      {
+        "tarih": "2026-04-22",
+        "ad": "AYT-9",
+        "puan": 82,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 18.8,
+        "fen": 21.1,
+        "sosyal": 0.0
+      }
+    ],
+    "Ogrenci 09": [
+      {
+        "tarih": "2026-01-25",
+        "ad": "TYT-1",
+        "puan": 66,
+        "tur": "TYT",
+        "turkce": 28.5,
+        "mat": 32.0,
+        "fen": 18.2,
+        "sosyal": 16.5
+      },
+      {
+        "tarih": "2026-02-05",
+        "ad": "TYT-2",
+        "puan": 71,
+        "tur": "TYT",
+        "turkce": 31.3,
+        "mat": 17.8,
+        "fen": 22.8,
+        "sosyal": 18.7
+      },
+      {
+        "tarih": "2026-02-16",
+        "ad": "AYT-3",
+        "puan": 72,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 16.1,
+        "fen": 14.6,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-02-27",
+        "ad": "TYT-4",
+        "puan": 70,
+        "tur": "TYT",
+        "turkce": 25.1,
+        "mat": 30.4,
+        "fen": 22.3,
+        "sosyal": 14.8
+      },
+      {
+        "tarih": "2026-03-10",
+        "ad": "TYT-5",
+        "puan": 76,
+        "tur": "TYT",
+        "turkce": 20.4,
+        "mat": 20.5,
+        "fen": 22.9,
+        "sosyal": 15.9
+      },
+      {
+        "tarih": "2026-03-21",
+        "ad": "AYT-6",
+        "puan": 78,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 26.1,
+        "fen": 13.6,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-04-01",
+        "ad": "TYT-7",
+        "puan": 77,
+        "tur": "TYT",
+        "turkce": 30.2,
+        "mat": 28.2,
+        "fen": 9.3,
+        "sosyal": 17.4
+      },
+      {
+        "tarih": "2026-04-12",
+        "ad": "TYT-8",
+        "puan": 80,
+        "tur": "TYT",
+        "turkce": 30.7,
+        "mat": 16.6,
+        "fen": 10.3,
+        "sosyal": 18.5
+      },
+      {
+        "tarih": "2026-04-23",
+        "ad": "AYT-9",
+        "puan": 81,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 29.8,
+        "fen": 12.8,
+        "sosyal": 0.0
+      }
+    ],
+    "Ogrenci 10": [
+      {
+        "tarih": "2026-01-26",
+        "ad": "TYT-1",
+        "puan": 70,
+        "tur": "TYT",
+        "turkce": 26.3,
+        "mat": 24.7,
+        "fen": 16.1,
+        "sosyal": 21.0
+      },
+      {
+        "tarih": "2026-02-06",
+        "ad": "TYT-2",
+        "puan": 68,
+        "tur": "TYT",
+        "turkce": 28.3,
+        "mat": 24.8,
+        "fen": 10.1,
+        "sosyal": 13.8
+      },
+      {
+        "tarih": "2026-02-17",
+        "ad": "AYT-3",
+        "puan": 75,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 27.4,
+        "fen": 21.0,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-02-28",
+        "ad": "TYT-4",
+        "puan": 70,
+        "tur": "TYT",
+        "turkce": 27.3,
+        "mat": 18.9,
+        "fen": 13.8,
+        "sosyal": 16.7
+      },
+      {
+        "tarih": "2026-03-11",
+        "ad": "TYT-5",
+        "puan": 79,
+        "tur": "TYT",
+        "turkce": 26.1,
+        "mat": 24.8,
+        "fen": 18.7,
+        "sosyal": 15.3
+      },
+      {
+        "tarih": "2026-03-22",
+        "ad": "AYT-6",
+        "puan": 76,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 16.7,
+        "fen": 8.5,
+        "sosyal": 0.0
+      },
+      {
+        "tarih": "2026-04-02",
+        "ad": "TYT-7",
+        "puan": 79,
+        "tur": "TYT",
+        "turkce": 24.4,
+        "mat": 20.5,
+        "fen": 16.1,
+        "sosyal": 12.0
+      },
+      {
+        "tarih": "2026-04-13",
+        "ad": "TYT-8",
+        "puan": 85,
+        "tur": "TYT",
+        "turkce": 28.5,
+        "mat": 30.5,
+        "fen": 15.4,
+        "sosyal": 16.1
+      },
+      {
+        "tarih": "2026-04-24",
+        "ad": "AYT-9",
+        "puan": 81,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 20.4,
+        "fen": 16.1,
+        "sosyal": 0.0
+      }
+    ],
+    "Ogrenci 11 (EA)": [
+      {
+        "tarih": "2026-02-10",
+        "ad": "TYT-1",
+        "puan": 63,
+        "tur": "TYT",
+        "turkce": 29.0,
+        "mat": 20.5,
+        "fen": 8.0,
+        "sosyal": 13.5,
+        "sos1": 0.0,
+        "sos2": 0.0
+      },
+      {
+        "tarih": "2026-02-25",
+        "ad": "AYT-EA-2",
+        "puan": 67,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 25.0,
+        "fen": 4.5,
+        "sosyal": 0.0,
+        "sos1": 19.0,
+        "sos2": 5.0
+      },
+      {
+        "tarih": "2026-03-15",
+        "ad": "AYT-EA-3",
+        "puan": 70,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 27.5,
+        "fen": 5.0,
+        "sosyal": 0.0,
+        "sos1": 21.0,
+        "sos2": 5.5
+      }
+    ],
+    "Ogrenci 12 (Sozel)": [
+      {
+        "tarih": "2026-02-11",
+        "ad": "TYT-1",
+        "puan": 61,
+        "tur": "TYT",
+        "turkce": 31.5,
+        "mat": 9.5,
+        "fen": 5.0,
+        "sosyal": 17.5,
+        "sos1": 0.0,
+        "sos2": 0.0
+      },
+      {
+        "tarih": "2026-02-27",
+        "ad": "AYT-SOZ-2",
+        "puan": 69,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 5.0,
+        "fen": 2.5,
+        "sosyal": 0.0,
+        "sos1": 27.0,
+        "sos2": 24.0
+      },
+      {
+        "tarih": "2026-03-18",
+        "ad": "AYT-SOZ-3",
+        "puan": 72,
+        "tur": "AYT",
+        "turkce": 0.0,
+        "mat": 5.5,
+        "fen": 3.0,
+        "sosyal": 0.0,
+        "sos1": 28.0,
+        "sos2": 25.5
+      }
+    ]
+  },
+  "konu_verisi": {
+    "TYT": {
+      "Matematik": [
+        "Temel Kavramlar",
+        "Problemler",
+        "Oran Oranti",
+        "Fonksiyonlar"
+      ],
+      "Turkce": [
+        "Paragraf",
+        "Cumlede Anlam",
+        "Dil Bilgisi"
+      ],
+      "Fizik": [
+        "Hareket",
+        "Kuvvet"
+      ],
+      "Kimya": [
+        "Atom",
+        "Periyodik Sistem"
+      ],
+      "Biyoloji": [
+        "Hucre",
+        "Kalıtım"
+      ],
+      "Geometri": [
+        "Ucgenler",
+        "Dortgenler"
+      ]
+    },
+    "AYT": {
+      "Matematik": [
+        "Trigonometri",
+        "Logaritma",
+        "Turev",
+        "Integral"
+      ],
+      "Fizik": [
+        "Elektrik",
+        "Manyetizma"
+      ],
+      "Kimya": [
+        "Gazlar",
+        "Denge"
+      ],
+      "Biyoloji": [
+        "Sinir Sistemi",
+        "Ekoloji"
+      ]
+    },
+    "5. Sınıf": {},
+    "6. Sınıf": {},
+    "7. Sınıf": {},
+    "8. Sınıf": {},
+    "9. Sınıf": {},
+    "10. Sınıf": {},
+    "11. Sınıf": {},
+    "12. Sınıf": {}
+  },
+  "aktif_ogrenci": "Ogrenci 01",
+  "aktif_hafta": "Hafta 1"
+}

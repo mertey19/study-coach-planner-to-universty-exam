@@ -1,0 +1,8 @@
+# Haftalık Koçluk Çizelgesi — Python bağımlılıkları
+# tkinter: Python ile birlikte gelir (Windows resmi kurulumda)
+
+openpyxl>=3.1.0
+reportlab>=4.0.0
+
+# .exe oluşturmak için (geliştirici makinesinde):
+# pip install pyinstaller
