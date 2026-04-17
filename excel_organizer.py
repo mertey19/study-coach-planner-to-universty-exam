@@ -1103,19 +1103,19 @@ class CoachingApp:
         if trend:
             is_ayt_view = self.deneme_tur_filtre == "AYT"
             if is_ayt_view:
-                s1_vals = [float(d.get("sos1", 0) or 0) for d in trend]
-                s2_vals = [float(d.get("sos2", 0) or 0) for d in trend]
-                a_vals = [float(d.get("mat", 0) or 0) for d in trend]
-                b_vals = [float(d.get("fen", 0) or 0) for d in trend]
+                first_subject_values = [float(exam.get("mat", 0) or 0) for exam in trend]
+                second_subject_values = [float(exam.get("fen", 0) or 0) for exam in trend]
+                third_subject_values = [float(exam.get("sos1", 0) or 0) for exam in trend]
+                fourth_subject_values = [float(exam.get("sos2", 0) or 0) for exam in trend]
                 legend = [("Mat", "#1e88e5"), ("Fen", "#43a047"), ("Edb-S1", "#8e24aa"), ("Sos-2", "#fb8c00")]
-                max_net = max(a_vals + b_vals + s1_vals + s2_vals) if trend else 1
+                max_net = max(first_subject_values + second_subject_values + third_subject_values + fourth_subject_values) if trend else 1
             else:
-                a_vals = [float(d.get("turkce", 0) or 0) for d in trend]
-                b_vals = [float(d.get("mat", 0) or 0) for d in trend]
-                s1_vals = [float(d.get("fen", 0) or 0) for d in trend]
-                s2_vals = [float(d.get("sosyal", 0) or 0) for d in trend]
+                first_subject_values = [float(exam.get("turkce", 0) or 0) for exam in trend]
+                second_subject_values = [float(exam.get("mat", 0) or 0) for exam in trend]
+                third_subject_values = [float(exam.get("fen", 0) or 0) for exam in trend]
+                fourth_subject_values = [float(exam.get("sosyal", 0) or 0) for exam in trend]
                 legend = [("Tr", "#8e24aa"), ("Mat", "#1e88e5"), ("Fen", "#43a047"), ("Sos", "#fb8c00")]
-                max_net = max(a_vals + b_vals + s1_vals + s2_vals) if trend else 1
+                max_net = max(first_subject_values + second_subject_values + third_subject_values + fourth_subject_values) if trend else 1
             max_net = max(max_net, 1)
             n_t = len(trend)
             slot_w = max(28, chart_w // max(n_t, 1))
@@ -1195,10 +1195,10 @@ class CoachingApp:
             usable_h = chart_h - (74 + (summary_lines * 12))
             for i in range(n_t):
                 x0 = pad_left + i * slot_w + 6
-                h1 = int((a_vals[i] / max_net) * usable_h)
-                h2 = int((b_vals[i] / max_net) * usable_h)
-                h3 = int((s1_vals[i] / max_net) * usable_h)
-                h4 = int((s2_vals[i] / max_net) * usable_h)
+                h1 = int((first_subject_values[i] / max_net) * usable_h)
+                h2 = int((second_subject_values[i] / max_net) * usable_h)
+                h3 = int((third_subject_values[i] / max_net) * usable_h)
+                h4 = int((fourth_subject_values[i] / max_net) * usable_h)
                 c1, c2, c3, c4 = legend[0][1], legend[1][1], legend[2][1], legend[3][1]
                 self.grafik_canvas.create_rectangle(x0, baseline, x0 + bar_w4, baseline - h1, outline=c1, fill=c1)
                 self.grafik_canvas.create_rectangle(x0 + bar_w4 + 1, baseline, x0 + 2 * bar_w4 + 1, baseline - h2, outline=c2, fill=c2)
@@ -1207,13 +1207,13 @@ class CoachingApp:
                 # Her dersin netini bar üstünde göster
                 sayi_goster = (n_t <= 4 and bar_w4 >= 8)
                 if sayi_goster and h1 >= 10:
-                    self.grafik_canvas.create_text(x0 + bar_w4 // 2, baseline - h1 - 7, text=f"{a_vals[i]:.1f}", fill=self._fg, font=("Segoe UI", 6))
+                    self.grafik_canvas.create_text(x0 + bar_w4 // 2, baseline - h1 - 7, text=f"{first_subject_values[i]:.1f}", fill=self._fg, font=("Segoe UI", 6))
                 if sayi_goster and h2 >= 10:
-                    self.grafik_canvas.create_text(x0 + (3 * bar_w4) // 2 + 1, baseline - h2 - 7, text=f"{b_vals[i]:.1f}", fill=self._fg, font=("Segoe UI", 6))
+                    self.grafik_canvas.create_text(x0 + (3 * bar_w4) // 2 + 1, baseline - h2 - 7, text=f"{second_subject_values[i]:.1f}", fill=self._fg, font=("Segoe UI", 6))
                 if sayi_goster and h3 >= 10:
-                    self.grafik_canvas.create_text(x0 + (5 * bar_w4) // 2 + 2, baseline - h3 - 7, text=f"{s1_vals[i]:.1f}", fill=self._fg, font=("Segoe UI", 6))
+                    self.grafik_canvas.create_text(x0 + (5 * bar_w4) // 2 + 2, baseline - h3 - 7, text=f"{third_subject_values[i]:.1f}", fill=self._fg, font=("Segoe UI", 6))
                 if sayi_goster and h4 >= 10:
-                    self.grafik_canvas.create_text(x0 + (7 * bar_w4) // 2 + 3, baseline - h4 - 7, text=f"{s2_vals[i]:.1f}", fill=self._fg, font=("Segoe UI", 6))
+                    self.grafik_canvas.create_text(x0 + (7 * bar_w4) // 2 + 3, baseline - h4 - 7, text=f"{fourth_subject_values[i]:.1f}", fill=self._fg, font=("Segoe UI", 6))
                 lbl = (trend[i].get("ad") or trend[i].get("tarih", ""))[:6]
                 self.grafik_canvas.create_text(x0 + 2 * bar_w4, baseline + 10, text=lbl, fill=self._fg, font=("Segoe UI", 7))
         else:
@@ -2323,25 +2323,25 @@ class CoachingApp:
         """Aktif öğrenciye ait son seçimleri forma geri uygular."""
         if self.aktif_ogrenci is None:
             return
-        t = self.ogrenci_tercihleri.get(self.aktif_ogrenci, {})
-        if not t:
+        saved_preferences = self.ogrenci_tercihleri.get(self.aktif_ogrenci, {})
+        if not saved_preferences:
             return
-        if self.gun_combo is not None and t.get("gun") in gunler:
-            self.gun_combo.set(t.get("gun"))
-        if self.saat_combo is not None and t.get("saat") in saatler:
-            self.saat_combo.set(t.get("saat"))
-        if self.sinav_combo is not None and t.get("sinav"):
-            self.sinav_combo.set(t.get("sinav"))
+        if self.gun_combo is not None and saved_preferences.get("gun") in gunler:
+            self.gun_combo.set(saved_preferences.get("gun"))
+        if self.saat_combo is not None and saved_preferences.get("saat") in saatler:
+            self.saat_combo.set(saved_preferences.get("saat"))
+        if self.sinav_combo is not None and saved_preferences.get("sinav"):
+            self.sinav_combo.set(saved_preferences.get("sinav"))
         self.guncelle_ders_combo()
-        if self.ders_combo is not None and t.get("ders") in (self.ders_combo["values"] or []):
-            self.ders_combo.set(t.get("ders"))
+        if self.ders_combo is not None and saved_preferences.get("ders") in (self.ders_combo["values"] or []):
+            self.ders_combo.set(saved_preferences.get("ders"))
         self.guncelle_konu_combo()
-        if self.konu_combo is not None and t.get("konu") in (self.konu_combo["values"] or []):
-            self.konu_combo.set(t.get("konu"))
-        if self.kaynak_combo is not None and t.get("kaynak"):
+        if self.konu_combo is not None and saved_preferences.get("konu") in (self.konu_combo["values"] or []):
+            self.konu_combo.set(saved_preferences.get("konu"))
+        if self.kaynak_combo is not None and saved_preferences.get("kaynak"):
             kaynak_values = list(self.kaynak_combo["values"] or [])
-            if t.get("kaynak") in kaynak_values:
-                self.kaynak_combo.set(t.get("kaynak"))
+            if saved_preferences.get("kaynak") in kaynak_values:
+                self.kaynak_combo.set(saved_preferences.get("kaynak"))
         self._otomatik_metin_guncelle(force=True)
 
     def _otomatik_metin_parcasi(self) -> str:
@@ -2351,45 +2351,45 @@ class CoachingApp:
         konu = (self.konu_combo.get() if self.konu_combo is not None else "").strip()
         if not tur or not ders or not konu:
             return ""
-        parca = f"{tur} {ders} - {konu}"
+        auto_text = f"{tur} {ders} - {konu}"
         kaynak = (self.kaynak_combo.get() if self.kaynak_combo is not None else "").strip()
         if kaynak and kaynak != "(Yayın seç)":
-            parca += f" | Yayın: {kaynak}"
-        return parca
+            auto_text += f" | Yayın: {kaynak}"
+        return auto_text
 
     def _otomatik_metin_guncelle(self, force: bool = False):
         """Gerekirse metin kutusunu seçimlere göre günceller."""
         if self.metin_entry is None:
             return
-        parca = self._otomatik_metin_parcasi()
-        if not parca:
+        auto_text = self._otomatik_metin_parcasi()
+        if not auto_text:
             return
         mevcut = self.metin_entry.get().strip()
         if force or (not mevcut) or (mevcut == self._last_auto_text):
             self.metin_entry.delete(0, tk.END)
-            self.metin_entry.insert(0, parca)
-            self._last_auto_text = parca
+            self.metin_entry.insert(0, auto_text)
+            self._last_auto_text = auto_text
 
     def _onerileri_yenile(self):
         """Aktif öğrenci için en sık kullanılan metinleri öneri kutusuna yazar."""
         if self.oneri_combo is None:
             return
-        oneriler = []
+        suggestions = []
         if self.aktif_ogrenci and self.aktif_ogrenci in self.ogrenciler:
-            sayac = {}
-            ogr_data = self.ogrenciler.get(self.aktif_ogrenci, {})
-            for hafta_data in ogr_data.values():
-                for g in gunler:
-                    for entry in (hafta_data.get(g, {}) or {}).values():
+            usage_counts = {}
+            student_weeks = self.ogrenciler.get(self.aktif_ogrenci, {})
+            for week_data in student_weeks.values():
+                for day_name in gunler:
+                    for entry in (week_data.get(day_name, {}) or {}).values():
                         text, _ = self.parse_entry(entry)
                         text = text.strip()
                         if not text:
                             continue
-                        sayac[text] = sayac.get(text, 0) + 1
-            oneriler = [k for k, _ in sorted(sayac.items(), key=lambda it: (-it[1], it[0]))[:8]]
-        self.oneri_combo["values"] = oneriler
-        if oneriler:
-            self.oneri_combo.set(oneriler[0])
+                        usage_counts[text] = usage_counts.get(text, 0) + 1
+            suggestions = [k for k, _ in sorted(usage_counts.items(), key=lambda item: (-item[1], item[0]))[:8]]
+        self.oneri_combo["values"] = suggestions
+        if suggestions:
+            self.oneri_combo.set(suggestions[0])
         else:
             self.oneri_combo.set("")
 
@@ -2397,45 +2397,45 @@ class CoachingApp:
         """Seçili öneriyi metin alanına uygular."""
         if self.metin_entry is None or self.oneri_combo is None:
             return
-        txt = (self.oneri_combo.get() or "").strip()
-        if not txt:
+        selected_text = (self.oneri_combo.get() or "").strip()
+        if not selected_text:
             return
         self.metin_entry.delete(0, tk.END)
-        self.metin_entry.insert(0, txt)
-        self._last_auto_text = txt
+        self.metin_entry.insert(0, selected_text)
+        self._last_auto_text = selected_text
 
     def _varsayilan_otoplan_onerileri(self) -> list[str]:
         """Öğrenci alanına göre hızlı plan öneri metinleri üretir."""
         alan = self._ogrenci_ayt_alani()
         if alan == "EA":
-            baz = [
+            subject_pairs = [
                 ("AYT", "Matematik"),
                 ("TYT", "Turkce"),
                 ("TYT", "Sosyal"),
                 ("TYT", "Matematik"),
             ]
         elif alan == "Sözel":
-            baz = [
+            subject_pairs = [
                 ("TYT", "Turkce"),
                 ("TYT", "Sosyal"),
                 ("TYT", "Cografya"),
                 ("TYT", "Matematik"),
             ]
         else:  # Sayısal
-            baz = [
+            subject_pairs = [
                 ("AYT", "Matematik"),
                 ("AYT", "Fizik"),
                 ("AYT", "Kimya"),
                 ("TYT", "Matematik"),
             ]
-        out: list[str] = []
-        for tur, ders in baz:
+        default_suggestions: list[str] = []
+        for tur, ders in subject_pairs:
             konular = KONU_VERISI.get(tur, {}).get(ders, [])
             if konular:
-                out.append(f"{tur} {ders} - {konular[0]}")
-        if not out:
-            out = ["TYT Matematik - Temel Kavramlar", "TYT Turkce - Paragraf", "Deneme analizi + yanlışlar"]
-        return out
+                default_suggestions.append(f"{tur} {ders} - {konular[0]}")
+        if not default_suggestions:
+            default_suggestions = ["TYT Matematik - Temel Kavramlar", "TYT Turkce - Paragraf", "Deneme analizi + yanlışlar"]
+        return default_suggestions
 
     def otomatik_plan_ekle(self):
         """Seçili güne, minimum input ile otomatik 3 kayıt ekler."""
@@ -2447,39 +2447,39 @@ class CoachingApp:
             messagebox.showwarning("Uyarı", "Önce bir gün seçmelisin.")
             return
 
-        gun_prog = program.get(gun, {})
-        hedef_saatler = [s for s in ("09:00", "16:00", "21:00") if s in saatler]
-        if len(hedef_saatler) < 3:
-            hedef_saatler = list(saatler[:3])
+        day_program = program.get(gun, {})
+        target_hours = [hour_label for hour_label in ("09:00", "16:00", "21:00") if hour_label in saatler]
+        if len(target_hours) < 3:
+            target_hours = list(saatler[:3])
 
-        secili_oneriler = []
+        selected_suggestions = []
         if self.oneri_combo is not None:
-            secili_oneriler = [s for s in (self.oneri_combo["values"] or []) if str(s).strip()]
-        adaylar = list(secili_oneriler) + self._varsayilan_otoplan_onerileri()
-        benzersiz = []
-        for a in adaylar:
-            a = str(a).strip()
-            if a and a not in benzersiz:
-                benzersiz.append(a)
-        metinler = benzersiz[:3]
-        while len(metinler) < 3:
-            metinler.append("Deneme analizi + yanlışlar")
+            selected_suggestions = [value for value in (self.oneri_combo["values"] or []) if str(value).strip()]
+        candidate_suggestions = list(selected_suggestions) + self._varsayilan_otoplan_onerileri()
+        unique_suggestions = []
+        for suggestion in candidate_suggestions:
+            suggestion = str(suggestion).strip()
+            if suggestion and suggestion not in unique_suggestions:
+                unique_suggestions.append(suggestion)
+        planned_texts = unique_suggestions[:3]
+        while len(planned_texts) < 3:
+            planned_texts.append("Deneme analizi + yanlışlar")
 
-        dolu = [s for s in hedef_saatler if s in gun_prog]
-        if dolu:
-            ok = messagebox.askyesno(
+        occupied_hours = [hour_label for hour_label in target_hours if hour_label in day_program]
+        if occupied_hours:
+            approved = messagebox.askyesno(
                 "Onay",
-                f"{gun} gününde şu saatler dolu: {', '.join(dolu)}\nÜzerine yazılsın mı?"
+                f"{gun} gününde şu saatler dolu: {', '.join(occupied_hours)}\nÜzerine yazılsın mı?"
             )
-            if not ok:
+            if not approved:
                 return
 
-        for i, s in enumerate(hedef_saatler[:3]):
-            eski = gun_prog.get(s)
+        for i, hour_label in enumerate(target_hours[:3]):
+            existing_entry = day_program.get(hour_label)
             done_flag = False
-            if isinstance(eski, dict):
-                _, done_flag = self.parse_entry(eski)
-            gun_prog[s] = {"text": metinler[i], "done": done_flag}
+            if isinstance(existing_entry, dict):
+                _, done_flag = self.parse_entry(existing_entry)
+            day_program[hour_label] = {"text": planned_texts[i], "done": done_flag}
 
         self.edit_mode = False
         self.edit_prev_key = None
