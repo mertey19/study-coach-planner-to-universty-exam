@@ -632,7 +632,7 @@ KONU_VERISI = {
 class CoachingApp:
     def __init__(self, root: tk.Tk):
         self.root = root
-        self.root.title("Haftalık Koçluk Çizelgesi Doldurucu")
+        self.root.title("Weekly Study Coach Planner")
         self.root.resizable(True, True)
 
         try:
@@ -686,9 +686,9 @@ class CoachingApp:
         self.kaynak_combo = None  # yayın seçimi
         self.saat_multi_listbox = None  # çoklu saat seçimi
         self.deneme_tur_combo = None
-        self.deneme_tur_filtre = "Tümü"
+        self.deneme_tur_filtre = "All"
         self.deneme_zaman_combo = None
-        self.deneme_zaman_filtre = "Tümü"
+        self.deneme_zaman_filtre = "All"
 
         # Butonlar (state yönetimi için)
         self.ekle_btn = None
@@ -735,7 +735,7 @@ class CoachingApp:
             ogr_data = self.ogrenciler[self.aktif_ogrenci]
             haftalar = list(ogr_data.keys())
             if not self.aktif_hafta or self.aktif_hafta not in haftalar:
-                self.aktif_hafta = haftalar[0] if haftalar else "Hafta 1"
+                self.aktif_hafta = haftalar[0] if haftalar else "Week 1"
             if self.hafta_combo is not None:
                 self.hafta_combo["values"] = haftalar
                 self.hafta_combo.set(self.aktif_hafta)
@@ -758,7 +758,7 @@ class CoachingApp:
 
     @staticmethod
     def _normalize_saat_label(saat: str) -> str:
-        """Saat etiketini HH:MM biçimine getirir (örn. 9:00 -> 09:00)."""
+        """Normalize hour labels to HH:MM format (e.g. 9:00 -> 09:00)."""
         parca = str(saat).split(":")
         if len(parca) == 2 and parca[0].isdigit() and parca[1].isdigit():
             return f"{int(parca[0]):02d}:{int(parca[1]):02d}"
@@ -799,7 +799,7 @@ class CoachingApp:
             }
             self._storage.save(data)
         except Exception as e:
-            print("Kaydetme hatası:", e)
+            print("Save error:", e)
 
     def _otomatik_yedekleme(self):
         """5 dakikada bir diske kaydedip yedek dosyası oluşturur."""
@@ -817,7 +817,7 @@ class CoachingApp:
         """Veriyi dışa aktar (json)."""
         default_name = f"program_export_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         path = filedialog.asksaveasfilename(
-            title="Veriyi dışa aktar (JSON)",
+            title="Export data (JSON)",
             defaultextension=".json",
             initialfile=default_name,
             filetypes=[("JSON", "*.json")],
@@ -827,23 +827,23 @@ class CoachingApp:
         try:
             self.kaydet_diske()
             self._storage.export_to(path)
-            messagebox.showinfo("Dışa Aktar", f"Veri dışa aktarıldı:\n{path}")
+            messagebox.showinfo("Export", f"Data exported:\n{path}")
         except Exception as e:
-            messagebox.showerror("Hata", f"Dışa aktarma başarısız:\n{e}")
+            messagebox.showerror("Error", f"Export failed:\n{e}")
 
     def ice_aktar_json(self):
         """Dışarıdan json verisini içe aktar."""
         path = filedialog.askopenfilename(
-            title="Veri içe aktar (JSON)",
-            filetypes=[("JSON", "*.json"), ("Tümü", "*.*")],
+            title="Import data (JSON)",
+            filetypes=[("JSON", "*.json"), ("All", "*.*")],
         )
         if not path:
             return
         if not messagebox.askyesno(
-            "Onay",
-            "Mevcut verinin üzerine yazılacak.\n"
-            "Devam etmeden önce otomatik yedek alınacak.\n\n"
-            "Devam edilsin mi?",
+            "Confirm",
+            "Current data will be overwritten.\n"
+            "A backup will be created first.\n\n"
+            "Continue?",
         ):
             return
         try:
@@ -852,21 +852,21 @@ class CoachingApp:
             self._storage.import_from(path)
             self._yukle_ve_uygula()
             self._ui_data_refresh()
-            messagebox.showinfo("İçe Aktar", "Veri başarıyla içe aktarıldı.")
+            messagebox.showinfo("Import", "Data imported successfully.")
         except Exception as e:
-            messagebox.showerror("Hata", f"İçe aktarma başarısız:\n{e}")
+            messagebox.showerror("Error", f"Import failed:\n{e}")
 
     def yedekten_don(self):
         """Tarihli yedeklerden birini seçip geri yükler."""
         backups = self._storage.list_backups()
         if not backups:
-            messagebox.showwarning("Yedek", "Henüz tarihli yedek bulunamadı.")
+            messagebox.showwarning("Backup", "No timestamped backups found yet.")
             return
 
         win = tk.Toplevel(self.root)
-        win.title("Yedekten Dön")
+        win.title("Restore Backup")
         win.transient(self.root)
-        tk.Label(win, text="Geri yüklenecek yedeği seç:", font=self._font_label).pack(padx=10, pady=(10, 5), anchor="w")
+        tk.Label(win, text="Select a backup to restore:", font=self._font_label).pack(padx=10, pady=(10, 5), anchor="w")
         lb = tk.Listbox(win, width=65, height=10, exportselection=False)
         for p in backups:
             lb.insert(tk.END, os.path.basename(p))
@@ -879,7 +879,7 @@ class CoachingApp:
                 return
             idx = sel[0]
             target = backups[idx]
-            if not messagebox.askyesno("Onay", f"Şu yedek geri yüklensin mi?\n{os.path.basename(target)}", parent=win):
+            if not messagebox.askyesno("Confirm", f"Restore this backup?\n{os.path.basename(target)}", parent=win):
                 return
             try:
                 self.kaydet_diske()
@@ -888,21 +888,21 @@ class CoachingApp:
                 self._yukle_ve_uygula()
                 self._ui_data_refresh()
                 win.destroy()
-                messagebox.showinfo("Yedek", "Yedek başarıyla geri yüklendi.")
+                messagebox.showinfo("Backup", "Backup restored successfully.")
             except Exception as e:
-                messagebox.showerror("Hata", f"Yedek geri yüklenemedi:\n{e}", parent=win)
+                messagebox.showerror("Error", f"Backup restore failed:\n{e}", parent=win)
 
         btn = ttk.Frame(win)
         btn.pack(fill="x", padx=10, pady=10)
-        tk.Button(btn, text="Geri Yükle", command=uygula, **self._btn_opts).pack(side="left")
-        tk.Button(btn, text="İptal", command=win.destroy, **self._btn_opts).pack(side="right")
+        tk.Button(btn, text="Restore", command=uygula, **self._btn_opts).pack(side="left")
+        tk.Button(btn, text="Cancel", command=win.destroy, **self._btn_opts).pack(side="right")
 
     def veriyi_sifirla(self):
         """Tüm kayıtları sıfırlar (önce otomatik yedek alır)."""
         if not messagebox.askyesno(
-            "Veriyi Sıfırla",
-            "Tüm öğrenciler, programlar, notlar ve deneme verileri sıfırlanacak.\n"
-            "Önce otomatik yedek alınacak.\n\nDevam edilsin mi?",
+            "Reset Data",
+            "All students, plans, notes and exam data will be reset.\n"
+            "A backup will be created first.\n\nContinue?",
         ):
             return
         try:
@@ -911,9 +911,9 @@ class CoachingApp:
             self._storage.reset_data()
             self._yukle_ve_uygula()
             self._ui_data_refresh()
-            messagebox.showinfo("Sıfırlandı", "Tüm veri sıfırlandı.")
+            messagebox.showinfo("Reset complete", "All data reset.")
         except Exception as e:
-            messagebox.showerror("Hata", f"Veri sıfırlanamadı:\n{e}")
+            messagebox.showerror("Error", f"Data reset failed:\n{e}")
 
     def _ui_data_refresh(self):
         """Storage'dan yüklenen veriyi arayüze yeniden uygula."""
@@ -941,17 +941,17 @@ class CoachingApp:
 
     def aktif_program(self):
         if self.aktif_ogrenci is None or self.aktif_ogrenci not in self.ogrenciler:
-            messagebox.showwarning("Uyarı", "Önce bir öğrenci ekleyip seçmelisin.")
+            messagebox.showwarning("Warning", "Önce bir öğrenci ekleyip seçmelisin.")
             return None
 
-        ogr_data = self.ogrenciler[self.aktif_ogrenci]  # {"Hafta 1": {...}, ...}
+        ogr_data = self.ogrenciler[self.aktif_ogrenci]  # {"Week 1": {...}, ...}
 
         # Aktif hafta yoksa veya öğrencide yoksa ilk haftayı seç
         if not self.aktif_hafta or self.aktif_hafta not in ogr_data:
             if ogr_data:
                 self.aktif_hafta = sorted(ogr_data.keys())[0]
             else:
-                self.aktif_hafta = "Hafta 1"
+                self.aktif_hafta = "Week 1"
                 ogr_data[self.aktif_hafta] = {g: {} for g in gunler}
 
             if self.hafta_combo is not None:
@@ -1009,7 +1009,7 @@ class CoachingApp:
             tum = sorted(self.denemeler[self.aktif_ogrenci], key=lambda x: x.get("tarih", ""))
             deneme_liste = self._deneme_listesi_filtrele(tum)[-10:]
         if not plan and not hafta_oran and not deneme_liste:
-            self.grafik_canvas.create_text(200, 120, text="Öğrenci ve hafta seçin;\nistatistik burada görünecek.\n\nDeneme eklemek için\n'Deneme ekle' butonunu kullanın.", fill=self._fg, font=self._font_label)
+            self.grafik_canvas.create_text(200, 120, text="Select a student and week;\nstats will appear here.\n\nUse 'Add exam'\nto add exam data.", fill=self._fg, font=self._font_label)
             return
         w = self.grafik_canvas.winfo_width() or 340
         h = self.grafik_canvas.winfo_height() or 620
@@ -1035,8 +1035,8 @@ class CoachingApp:
             self.grafik_canvas.create_rectangle(x, y0 - h_plan, x + bar_w, y0, outline=self._label_muted, fill=self._btn_bg)
             self.grafik_canvas.create_rectangle(x, y0 - h_yap, x + bar_w, y0, outline=self._accent, fill=self._accent)
             self.grafik_canvas.create_text(x + bar_w // 2, y0 + 12, text=gunler_etiket[i] if i < 7 else "", fill=self._fg, font=("Segoe UI", 8))
-        # 2) Haftalık tamamlanma %
-        self.grafik_canvas.create_text(pad_left + chart_w // 2, pad_top + chart_h + 14, text="Haftalık tamamlanma oranı (%)", fill=self._fg, font=("Segoe UI", 9, "bold"))
+        # 2) Weekly completion %
+        self.grafik_canvas.create_text(pad_left + chart_w // 2, pad_top + chart_h + 14, text="Weekly completion rate (%)", fill=self._fg, font=("Segoe UI", 9, "bold"))
         y0_2 = pad_top + chart_h + chart_h - 22
         n_hafta = len(hafta_isim)
         if n_hafta:
@@ -1050,7 +1050,7 @@ class CoachingApp:
                     ad = str(hafta_isim[i])
                     if ad.lower().startswith("hafta "):
                         parca = ad.split()
-                        lbl = f"Hafta\n{parca[1]}" if len(parca) > 1 else ad
+                        lbl = f"Week\n{parca[1]}" if len(parca) > 1 else ad
                     else:
                         lbl = ad if len(ad) <= 10 else (ad[:10] + "…")
                 else:
@@ -1090,7 +1090,7 @@ class CoachingApp:
         else:
             ham_var = bool(self.aktif_ogrenci and self.aktif_ogrenci in self.denemeler and self.denemeler[self.aktif_ogrenci])
             msg = (
-                "Bu dönem / tür için deneme yok.\nFiltreleri 'Tümü' yapın veya\nbaşka aralık seçin."
+                "Bu dönem / tür için deneme yok.\nFiltreleri 'All' yapın veya\nbaşka aralık seçin."
                 if ham_var
                 else "Henüz deneme yok.\n'Deneme ekle' ile ekleyin."
             )
@@ -1129,7 +1129,7 @@ class CoachingApp:
 
             # Son denemelerin ders ders net özeti
             summary_lines = 0
-            if self.deneme_tur_filtre == "Tümü":
+            if self.deneme_tur_filtre == "All":
                 son_tyt = next((d for d in reversed(trend) if (d.get("tur") or "TYT") == "TYT"), None)
                 son_ayt = next((d for d in reversed(trend) if (d.get("tur") or "TYT") == "AYT"), None)
                 y_ozet = pad_top + 3 * chart_h + 44
@@ -1226,25 +1226,25 @@ class CoachingApp:
             self.grafik_canvas.create_text(pad_left + chart_w // 2, y0_4 - (chart_h - 42) // 2, text=msg, fill=self._label_muted, font=self._font_label)
 
     def _ogrenci_ayt_alani(self, ogrenci_adi: Optional[str] = None) -> str:
-        """Öğrencinin AYT alanını döndürür; yoksa isim/denemeden tahmin eder."""
+        """Return student's AYT track; infer from name/history when needed."""
         ad = ogrenci_adi or self.aktif_ogrenci or ""
         ad_l = ad.lower()
-        # İsimde alan etiketi varsa en yüksek öncelik (örn: "(EA)", " - EA ", "(Sözel)")
+        # Highest priority: explicit track hint in the student name.
         if re.search(r"\bea\b", ad_l):
             return "EA"
-        if re.search(r"s[öo]zel", ad_l):
-            return "Sözel"
-        if re.search(r"say[ıi]sal", ad_l):
-            return "Sayısal"
+        if re.search(r"s[öo]zel|verbal", ad_l):
+            return "Verbal"
+        if re.search(r"say[ıi]sal|science", ad_l):
+            return "Science"
 
         alan = (self.ogrenci_alanlari.get(ad) or "").strip()
-        if alan in ("Sayısal", "EA", "Sözel"):
+        if alan in ("Science", "EA", "Verbal"):
             return alan
         alan_l = alan.lower()
-        if alan_l in ("sayisal", "sayısal"):
-            return "Sayısal"
-        if alan_l in ("sozel", "sözel"):
-            return "Sözel"
+        if alan_l in ("sayisal", "sayısal", "science"):
+            return "Science"
+        if alan_l in ("sozel", "sözel", "verbal"):
+            return "Verbal"
         if alan_l in ("ea", "eşit ağırlık", "esit agirlik", "eşit agirlik"):
             return "EA"
 
@@ -1256,11 +1256,11 @@ class CoachingApp:
             a = (d.get("ayt_alan") or "").strip().lower()
             if a in ("ea", "eşit ağırlık", "esit agirlik", "eşit agirlik"):
                 return "EA"
-            if a in ("sozel", "sözel"):
-                return "Sözel"
-            if a in ("sayisal", "sayısal"):
-                return "Sayısal"
-        return "Sayısal"
+            if a in ("sozel", "sözel", "verbal"):
+                return "Verbal"
+            if a in ("sayisal", "sayısal", "science"):
+                return "Science"
+        return "Science"
 
     def ogrenci_alani_degisti(self, event=None):
         """Aktif öğrenci için alan seçimini kaydeder."""
@@ -1269,8 +1269,8 @@ class CoachingApp:
         if self.ogrenci_alan_combo is None:
             return
         alan = (self.ogrenci_alan_combo.get() or "").strip()
-        if alan not in ("Sayısal", "EA", "Sözel"):
-            alan = "Sayısal"
+        if alan not in ("Science", "EA", "Verbal"):
+            alan = "Science"
         self.ogrenci_alanlari[self.aktif_ogrenci] = alan
         self.kaydet_diske()
         try:
@@ -1288,10 +1288,10 @@ class CoachingApp:
         sos1 = float(d.get("sos1", 0) or 0)
         sos2 = float(d.get("sos2", 0) or 0)
         if tur == "AYT":
-            alan = (ogrenci_ayt_alani or d.get("ayt_alan") or "Sayısal").strip().lower()
+            alan = (ogrenci_ayt_alani or d.get("ayt_alan") or "Science").strip().lower()
             if alan in ("ea", "eşit ağırlık", "esit agirlik", "eşit agirlik"):
                 return mat + sos1
-            if alan in ("sozel", "sözel"):
+            if alan in ("sozel", "sözel", "verbal"):
                 return sos1 + sos2
             return mat + fen
         return turkce + mat + fen + sosyal
@@ -1310,9 +1310,9 @@ class CoachingApp:
     def _deneme_listesi_filtrele(self, tum_liste: list) -> list:
         """Zaman (son 30 gün / 3 ay) ve tür (TYT/AYT) filtresini uygular."""
         bugun = date.today()
-        if self.deneme_zaman_filtre == "Son 30 gün":
+        if self.deneme_zaman_filtre == "Last 30 days":
             esik = bugun - timedelta(days=30)
-        elif self.deneme_zaman_filtre == "Son 3 ay":
+        elif self.deneme_zaman_filtre == "Last 3 months":
             esik = bugun - timedelta(days=90)
         else:
             esik = None
@@ -1332,14 +1332,14 @@ class CoachingApp:
         """Dönem filtresi değiştiğinde grafikleri yeniler."""
         if self.deneme_zaman_combo is not None:
             secim = self.deneme_zaman_combo.get().strip()
-            self.deneme_zaman_filtre = secim if secim in ("Tümü", "Son 30 gün", "Son 3 ay") else "Tümü"
+            self.deneme_zaman_filtre = secim if secim in ("All", "Last 30 days", "Last 3 months") else "All"
         self._grafikleri_ciz()
 
     def _deneme_tur_filtre_degisti(self, event=None):
-        """Deneme tür filtresi (Tümü/TYT/AYT) değiştiğinde grafikleri yeniler."""
+        """Deneme tür filtresi (All/TYT/AYT) değiştiğinde grafikleri yeniler."""
         if self.deneme_tur_combo is not None:
             secim = self.deneme_tur_combo.get().strip()
-            self.deneme_tur_filtre = secim if secim in ("Tümü", "TYT", "AYT") else "Tümü"
+            self.deneme_tur_filtre = secim if secim in ("All", "TYT", "AYT") else "All"
         self._grafikleri_ciz()
 
     def gunluk_istatistik(self, program: dict):
@@ -1472,21 +1472,21 @@ class CoachingApp:
     def ogrenci_ekle_veya_sec(self):
         ad = self.ogrenci_entry.get().strip()
         if not ad:
-            messagebox.showwarning("Uyarı", "Öğrenci adı soyadı boş olamaz.")
+            messagebox.showwarning("Warning", "Student full name cannot be empty.")
             return
 
         if self.aktif_ogrenci is not None:
             self.aktif_ogrenci_notunu_guncelle()
 
         if ad not in self.ogrenciler:
-            # Yeni öğrenci için başlangıçta sadece Hafta 1 oluştur
+            # Create the first week for a new student.
             self.ogrenciler[ad] = {
-                "Hafta 1": {g: {} for g in gunler}
+                "Week 1": {g: {} for g in gunler}
             }
             self.ogrenci_notlari[ad] = ""
-        secilen_alan = "Sayısal"
+        secilen_alan = "Science"
         if self.ogrenci_alan_combo is not None:
-            secilen_alan = self.ogrenci_alan_combo.get().strip() or "Sayısal"
+            secilen_alan = self.ogrenci_alan_combo.get().strip() or "Science"
         self.ogrenci_alanlari[ad] = secilen_alan
 
         self.aktif_ogrenci = ad
@@ -1496,7 +1496,7 @@ class CoachingApp:
 
         ogr_data = self.ogrenciler[ad]
         haftalar = list(ogr_data.keys())
-        self.aktif_hafta = "Hafta 1" if "Hafta 1" in haftalar else haftalar[0]
+        self.aktif_hafta = "Week 1" if "Week 1" in haftalar else haftalar[0]
         if self.hafta_combo is not None:
             self.hafta_combo["values"] = haftalar
             self.hafta_combo.set(self.aktif_hafta)
@@ -1511,7 +1511,7 @@ class CoachingApp:
 
         self.kaydet_diske()
         self.update_button_states()
-        messagebox.showinfo("Bilgi", f"Aktif öğrenci: {self.aktif_ogrenci}")
+        messagebox.showinfo("Info", f"Active student: {self.aktif_ogrenci}")
 
     def ogrenci_degisti(self, event=None):
         if self.aktif_ogrenci is not None:
@@ -1527,7 +1527,7 @@ class CoachingApp:
                 self.hafta_combo["values"] = haftalar
 
             if not self.aktif_hafta or self.aktif_hafta not in haftalar:
-                self.aktif_hafta = haftalar[0] if haftalar else "Hafta 1"
+                self.aktif_hafta = haftalar[0] if haftalar else "Week 1"
             if self.hafta_combo is not None:
                 self.hafta_combo.set(self.aktif_hafta)
 
@@ -1555,7 +1555,7 @@ class CoachingApp:
         metin = self.metin_entry.get().strip()
 
         if not gun or not metin:
-            messagebox.showwarning("Eksik Bilgi", "Gün ve metin boş olamaz.")
+            messagebox.showwarning("Missing Info", "Day and text cannot be empty.")
             return
 
         gun_prog = program[gun]
@@ -1564,15 +1564,15 @@ class CoachingApp:
         if self.edit_mode and self.edit_prev_key is not None:
             saat = self.saat_combo.get()
             if not saat:
-                messagebox.showwarning("Eksik Bilgi", "Saat seçmelisin.")
+                messagebox.showwarning("Missing Info", "You must choose an hour.")
                 return
 
             mevcut_var = gun_prog.get(saat) is not None
             if mevcut_var and not (self.edit_prev_key == (gun, saat)):
                 devam = messagebox.askyesno(
-                    "Üzerine Yazılsın mı?",
-                    f"{gun} - {saat} saatinde zaten bir kayıt var.\n"
-                    f"Üzerine yazmak istiyor musun?"
+                    "Overwrite Entry?",
+                    f"There is already an entry at {gun} - {saat}.\n"
+                    f"Do you want to overwrite it?"
                 )
                 if not devam:
                     return
@@ -1601,7 +1601,7 @@ class CoachingApp:
             if not hedef_saatler:
                 saat = self.saat_combo.get()
                 if not saat:
-                    messagebox.showwarning("Eksik Bilgi", "En az bir saat seçmelisin.")
+                    messagebox.showwarning("Missing Info", "Select at least one hour.")
                     return
                 hedef_saatler = [saat]
 
@@ -1609,10 +1609,10 @@ class CoachingApp:
             dolu_saatler = [s for s in hedef_saatler if s in gun_prog]
             if dolu_saatler:
                 devam = messagebox.askyesno(
-                    "Üzerine Yazılsın mı?",
-                    f"{gun} gününde şu saatlerde zaten kayıt var:\n"
+                    "Overwrite Entries?",
+                    f"There are already entries at these hours on {gun}:\n"
                     f"{', '.join(dolu_saatler)}\n\n"
-                    "Bu saatlerin ÜZERİNE yazmak istiyor musun?"
+                    "Do you want to overwrite them?"
                 )
                 if not devam:
                     return
@@ -1656,7 +1656,7 @@ class CoachingApp:
 
         key = self.secili_kaydi_bul()
         if key is None:
-            messagebox.showwarning("Uyarı", "Silmek için listeden bir ders satırı seçmelisin.")
+            messagebox.showwarning("Warning", "Silmek için listeden bir ders satırı seçmelisin.")
             return
 
         gun, saat = key
@@ -1682,7 +1682,7 @@ class CoachingApp:
 
         key = self.secili_kaydi_bul()
         if key is None:
-            messagebox.showwarning("Uyarı", "Düzenlemek için listeden bir ders satırı seçmelisin.")
+            messagebox.showwarning("Warning", "Düzenlemek için listeden bir ders satırı seçmelisin.")
             return
 
         gun, saat = key
@@ -1715,7 +1715,7 @@ class CoachingApp:
 
         key = self.secili_kaydi_bul()
         if key is None:
-            messagebox.showwarning("Uyarı", "Durum değiştirmek için listeden bir ders satırı seçmelisin.")
+            messagebox.showwarning("Warning", "Durum değiştirmek için listeden bir ders satırı seçmelisin.")
             return
 
         gun, saat = key
@@ -1737,13 +1737,13 @@ class CoachingApp:
 
         bos_mu = all(len(program[g]) == 0 for g in gunler)
         if bos_mu:
-            messagebox.showinfo("Bilgi", "Çizelge zaten boş.")
+            messagebox.showinfo("Info", "Schedule is already empty.")
             return
 
         devam = messagebox.askyesno(
-            "Onay",
-            "Bu haftanın tüm programını sıfırlamak istiyor musun?\n"
-            "(Bu işlem Excel dosyasını ETKİLEMEZ, sadece ekrandaki programı temizler.)"
+            "Confirm",
+            "Do you want to clear this week's plan?\n"
+            "(This does not affect the Excel file; it only clears the on-screen plan.)"
         )
         if not devam:
             return
@@ -1755,7 +1755,7 @@ class CoachingApp:
         self.metin_entry.delete(0, tk.END)
         self.sablon_combo.set(SABLON_SECIMLERI[0])
         if self.kaynak_combo is not None:
-            self.kaynak_combo.set("(Yayın seç)")
+            self.kaynak_combo.set("(Select source)")
         if self.saat_multi_listbox is not None:
             self.saat_multi_listbox.selection_clear(0, tk.END)
         self.listeyi_guncelle()
@@ -1772,20 +1772,20 @@ class CoachingApp:
         metin = self.metin_entry.get().strip()
 
         if not saat:
-            messagebox.showwarning("Uyarı", "Önce bir saat seçmelisin.")
+            messagebox.showwarning("Warning", "Select an hour first.")
             return
 
         if not metin:
-            messagebox.showwarning("Uyarı", "Yazılacak metin boş olamaz.")
+            messagebox.showwarning("Warning", "Text cannot be empty.")
             return
 
         win = tk.Toplevel(self.root)
-        win.title("Gün Seçimi")
+        win.title("Day Selection")
         win.resizable(False, False)
 
         tk.Label(
             win,
-            text=f"Bu metni hangi günlere ekleyelim?\n\nSaat: {saat}\nMetin: {metin}",
+            text=f"Which days should receive this text?\n\nHour: {saat}\nText: {metin}",
             justify="left"
         ).grid(row=0, column=0, columnspan=2, padx=10, pady=(10, 5), sticky="w")
 
@@ -1801,17 +1801,17 @@ class CoachingApp:
             secilenler = [g for g, v in gun_vars.items() if v.get()]
 
             if not secilenler:
-                messagebox.showwarning("Uyarı", "En az bir gün seçmelisin.")
+                messagebox.showwarning("Warning", "Select at least one day.")
                 return
 
             devam2 = messagebox.askyesno(
-                "Onay",
-                "Aşağıdaki bilgi, SEÇİLEN günler için aynı saate yazılacak:\n\n"
-                f"Saat : {saat}\n"
-                f"Metin: {metin}\n\n"
-                f"Seçilen günler: {', '.join(secilenler)}\n\n"
-                "Var olan kayıtların üzerine YAZILACAKTIR.\n\n"
-                "Devam etmek istiyor musun?"
+                "Confirm",
+                "The following text will be written to the same hour for SELECTED days:\n\n"
+                f"Hour : {saat}\n"
+                f"Text: {metin}\n\n"
+                f"Selected days: {', '.join(secilenler)}\n\n"
+                "Existing entries will be overwritten.\n\n"
+                "Continue?"
             )
             if not devam2:
                 return
@@ -1823,18 +1823,18 @@ class CoachingApp:
             self.kaydet_diske()
 
             messagebox.showinfo(
-                "Bilgi",
-                f"{', '.join(secilenler)} günlerinde {saat} saatine metin yazıldı."
+                "Info",
+                f"Text added at {saat} on: {', '.join(secilenler)}"
             )
             win.destroy()
 
         def iptal():
             win.destroy()
 
-        tk.Button(win, text="Uygula", width=12, command=uygula).grid(
+        tk.Button(win, text="Apply", width=12, command=uygula).grid(
             row=len(gunler) + 1, column=0, padx=10, pady=10, sticky="e"
         )
-        tk.Button(win, text="İptal", width=8, command=iptal).grid(
+        tk.Button(win, text="Cancel", width=8, command=iptal).grid(
             row=len(gunler) + 1, column=1, padx=5, pady=10, sticky="w"
         )
 
@@ -1846,7 +1846,7 @@ class CoachingApp:
             return
 
         if self.aktif_ogrenci is None or self.aktif_ogrenci not in self.ogrenciler:
-            messagebox.showwarning("Uyarı", "Önce bir öğrenci seçmelisin.")
+            messagebox.showwarning("Warning", "Önce bir öğrenci seçmelisin.")
             return
 
         ogr_data = self.ogrenciler[self.aktif_ogrenci]
@@ -1860,7 +1860,7 @@ class CoachingApp:
 
     def yeni_hafta_olustur(self):
         if self.aktif_ogrenci is None or self.aktif_ogrenci not in self.ogrenciler:
-            messagebox.showwarning("Uyarı", "Önce bir öğrenci seçmelisin.")
+            messagebox.showwarning("Warning", "Önce bir öğrenci seçmelisin.")
             return
 
         ogr_data = self.ogrenciler[self.aktif_ogrenci]
@@ -1873,7 +1873,7 @@ class CoachingApp:
                 if len(parcali) >= 2 and parcali[1].isdigit():
                     numaralar.append(int(parcali[1]))
         sonraki = (max(numaralar) + 1) if numaralar else 1
-        varsayilan_isim = f"Hafta {sonraki}"
+        varsayilan_isim = f"Week {sonraki}"
 
         isim = simpledialog.askstring(
             "Yeni Hafta",
@@ -1885,7 +1885,7 @@ class CoachingApp:
             return
 
         if isim in ogr_data:
-            messagebox.showwarning("Uyarı", "Bu isimde bir hafta zaten var.")
+            messagebox.showwarning("Warning", "Bu isimde bir hafta zaten var.")
             return
 
         ogr_data[isim] = {g: {} for g in gunler}
@@ -1901,11 +1901,11 @@ class CoachingApp:
     def hafta_kopyala(self):
         """Seçili haftanın programını başka bir haftaya (mevcut veya yeni) kopyalar."""
         if self.aktif_ogrenci is None or self.aktif_ogrenci not in self.ogrenciler:
-            messagebox.showwarning("Uyarı", "Önce bir öğrenci seçmelisin.")
+            messagebox.showwarning("Warning", "Önce bir öğrenci seçmelisin.")
             return
         ogr_data = self.ogrenciler[self.aktif_ogrenci]
         if not self.aktif_hafta or self.aktif_hafta not in ogr_data:
-            messagebox.showwarning("Uyarı", "Önce kopyalanacak haftayı seçmelisin.")
+            messagebox.showwarning("Warning", "Select the source week first.")
             return
 
         mevcut_haftalar = list(ogr_data.keys())
@@ -1929,10 +1929,10 @@ class CoachingApp:
         def kopyala():
             hedef = (yeni_entry.get() or "").strip() or (hedef_combo.get() if hedef_combo["values"] else "")
             if not hedef:
-                messagebox.showwarning("Uyarı", "Hedef hafta seçin veya yeni hafta adı yazın.", parent=win)
+                messagebox.showwarning("Warning", "Hedef hafta seçin veya yeni hafta adı yazın.", parent=win)
                 return
             if hedef == self.aktif_hafta:
-                messagebox.showwarning("Uyarı", "Hedef, şu anki haftadan farklı olmalı.", parent=win)
+                messagebox.showwarning("Warning", "Hedef, şu anki haftadan farklı olmalı.", parent=win)
                 return
             kaynak = ogr_data[self.aktif_hafta]
             ogr_data[hedef] = copy.deepcopy(kaynak)
@@ -1946,13 +1946,13 @@ class CoachingApp:
             messagebox.showinfo("Tamam", f"'{self.aktif_hafta}' haftası kopyalandı.", parent=self.root)
 
         tk.Button(win, text="Kopyala", command=kopyala, **self._btn_opts).grid(row=4, column=0, padx=10, pady=10, sticky="e")
-        tk.Button(win, text="İptal", command=win.destroy, **self._btn_opts).grid(row=4, column=1, padx=5, pady=10, sticky="w")
+        tk.Button(win, text="Cancel", command=win.destroy, **self._btn_opts).grid(row=4, column=1, padx=5, pady=10, sticky="w")
         win.columnconfigure(0, weight=1)
 
     def deneme_ekle_penceresi(self):
         """Deneme kaydı ekler (tarih, tür, puan, ders netleri)."""
         if self.aktif_ogrenci is None or self.aktif_ogrenci not in self.ogrenciler:
-            messagebox.showwarning("Uyarı", "Önce bir öğrenci seçmelisin.")
+            messagebox.showwarning("Warning", "Önce bir öğrenci seçmelisin.")
             return
         from datetime import date
         win = tk.Toplevel(self.root)
@@ -1974,9 +1974,9 @@ class CoachingApp:
         tur_combo.grid(row=3, column=1, padx=10, pady=8, sticky="w")
         self._lock_combobox_wheel(tur_combo)
         tk.Label(win, text="AYT alanı:", font=self._font_label).grid(row=4, column=0, padx=10, pady=8, sticky="e")
-        ayt_alan_combo = ttk.Combobox(win, values=["Sayısal", "EA", "Sözel"], state="readonly", width=10)
+        ayt_alan_combo = ttk.Combobox(win, values=["Science", "EA", "Verbal"], state="readonly", width=10)
         varsayilan_alan = self._ogrenci_ayt_alani()
-        ayt_alan_combo.set(varsayilan_alan if varsayilan_alan in ("Sayısal", "EA", "Sözel") else "Sayısal")
+        ayt_alan_combo.set(varsayilan_alan if varsayilan_alan in ("Science", "EA", "Verbal") else "Science")
         ayt_alan_combo.grid(row=4, column=1, padx=10, pady=8, sticky="w")
         self._lock_combobox_wheel(ayt_alan_combo)
         tk.Label(win, text="Türkçe net (TYT):", font=self._font_label).grid(row=5, column=0, padx=10, pady=8, sticky="e")
@@ -2024,7 +2024,7 @@ class CoachingApp:
             try:
                 puan = int(puan_entry.get().strip())
             except ValueError:
-                messagebox.showwarning("Uyarı", "Puan sayı olmalı.", parent=win)
+                messagebox.showwarning("Warning", "Puan sayı olmalı.", parent=win)
                 return
             try:
                 mat = float((mat_entry.get() or "0").replace(",", "."))
@@ -2034,7 +2034,7 @@ class CoachingApp:
                 sos1 = float((sos1_entry.get() or "0").replace(",", "."))
                 sos2 = float((sos2_entry.get() or "0").replace(",", "."))
             except ValueError:
-                messagebox.showwarning("Uyarı", "Net alanları sayı olmalı.", parent=win)
+                messagebox.showwarning("Warning", "Net alanları sayı olmalı.", parent=win)
                 return
             tur = tur_combo.get() or "TYT"
             ayt_alan = self._ogrenci_ayt_alani()
@@ -2067,7 +2067,7 @@ class CoachingApp:
             messagebox.showinfo("Tamam", "Deneme kaydedildi.", parent=self.root)
 
         tk.Button(win, text="Ekle", command=ekle, **self._btn_opts).grid(row=11, column=0, padx=10, pady=10, sticky="e")
-        tk.Button(win, text="İptal", command=win.destroy, **self._btn_opts).grid(row=11, column=1, padx=5, pady=10, sticky="w")
+        tk.Button(win, text="Cancel", command=win.destroy, **self._btn_opts).grid(row=11, column=1, padx=5, pady=10, sticky="w")
 
     # -------------- EXCEL -----------------
 
@@ -2077,8 +2077,8 @@ class CoachingApp:
             return
 
         path = filedialog.askopenfilename(
-            title="Koçluk Excel Dosyasını Seç",
-            filetypes=[("Excel Dosyaları", "*.xlsx *.xlsm *.xltx *.xltm"), ("Tümü", "*.*")]
+            title="Select Coaching Excel File",
+            filetypes=[("Excel Files", "*.xlsx *.xlsm *.xltx *.xltm"), ("All", "*.*")]
         )
         if not path:
             return
@@ -2095,12 +2095,12 @@ class CoachingApp:
             for gun in gunler:
                 program[gun] = loaded.get(gun, {})
         except Exception as e:
-            messagebox.showerror("Hata", f"Excel dosyası açılamadı:\n{e}")
+            messagebox.showerror("Error", f"Could not open Excel file:\n{e}")
             return
 
         self.listeyi_guncelle()
         self.kaydet_diske()
-        messagebox.showinfo("Bilgi", f"Dosya okundu. Mevcut program aktarıldı.\nÖğrenci: {self.aktif_ogrenci}")
+        messagebox.showinfo("Info", f"File loaded. Current plan imported.\nStudent: {self.aktif_ogrenci}")
 
     def excel_yaz(self, event=None):
         program = self.aktif_program()
@@ -2108,25 +2108,25 @@ class CoachingApp:
             return
 
         if self.excel_dosya_yolu is None:
-            messagebox.showwarning("Uyarı", "Önce bir Excel dosyası seçmelisin.")
+            messagebox.showwarning("Warning", "Önce bir Excel dosyası seçmelisin.")
             return
 
         try:
             self._excel_service.save_program_to_file(self.excel_dosya_yolu, program)
         except PermissionError:
             messagebox.showerror(
-                "Hata",
-                "Dosya kaydedilemedi.\nBüyük ihtimalle Excel'de açık.\n"
-                "Lütfen Excel dosyasını kapatıp tekrar deneyin."
+                "Error",
+                "Could not save the file.\nIt is likely open in Excel.\n"
+                "Please close the Excel file and try again."
             )
             return
         except Exception as e:
-            messagebox.showerror("Hata", f"Kaydetme sırasında hata oluştu:\n{e}")
+            messagebox.showerror("Error", f"An error occurred while saving:\n{e}")
             return
 
         messagebox.showinfo(
-            "Başarılı",
-            f"Çizelge kaydedildi.\nÖğrenci: {self.aktif_ogrenci}\nDosya: {self.excel_dosya_yolu}"
+            "Success",
+            f"Schedule saved.\nStudent: {self.aktif_ogrenci}\nFile: {self.excel_dosya_yolu}"
         )
 
     # -------------- PDF -----------------
@@ -2138,7 +2138,7 @@ class CoachingApp:
 
         if not any(len(program[g]) > 0 for g in gunler):
             messagebox.showwarning(
-                "Uyarı", "PDF oluşturmak için önce programa en az bir kayıt eklemelisin."
+                "Warning", "Add at least one entry before exporting to PDF."
             )
             return
 
@@ -2153,7 +2153,7 @@ class CoachingApp:
             title="PDF olarak kaydet",
             defaultextension=".pdf",
             initialfile=default_name,
-            filetypes=[("PDF Dosyası", "*.pdf")]
+            filetypes=[("PDF File", "*.pdf")]
         )
         if not path:
             return
@@ -2165,10 +2165,10 @@ class CoachingApp:
                 hafta_adi=self.aktif_hafta,
             )
         except Exception as e:
-            messagebox.showerror("Hata", f"PDF oluşturulurken hata oluştu:\n{e}")
+            messagebox.showerror("Error", f"An error occurred while creating PDF:\n{e}")
             return
 
-        messagebox.showinfo("Başarılı", f"PDF oluşturuldu.\nÖğrenci: {self.aktif_ogrenci}\nDosya: {path}")
+        messagebox.showinfo("Success", f"PDF created.\nStudent: {self.aktif_ogrenci}\nFile: {path}")
 
     # -------------- ÖZET / İSTATİSTİK -----------------
 
@@ -2189,8 +2189,8 @@ class CoachingApp:
         oran = int(round(100 * haftalik_yapilan / haftalik_toplam)) if haftalik_toplam else 0
 
         satirlar = [
-            f"Haftalık planlanan çalışma : {haftalik_toplam} saat",
-            f"Haftalık tamamlanan çalışma: {haftalik_yapilan} saat",
+            f"Weekly planned study : {haftalik_toplam} hours",
+            f"Weekly completed study: {haftalik_yapilan} hours",
             f"Genel tamamlama oranı     : %{oran}",
             "",
         ]
@@ -2259,14 +2259,14 @@ class CoachingApp:
 
         baslik_lbl = tk.Label(
             win,
-            text=f"Haftalık Çalışma İstatistikleri - {self.aktif_ogrenci} ({self.aktif_hafta})",
+            text=f"Weekly Study Statistics - {self.aktif_ogrenci} ({self.aktif_hafta})",
             font=("Arial", 12, "bold")
         )
         baslik_lbl.grid(row=0, column=0, columnspan=2, padx=10, pady=10)
 
         kolonlar = ("gun", "planlanan", "yapilan")
         tree = ttk.Treeview(win, columns=kolonlar, show="headings", height=len(gunler))
-        tree.heading("gun", text="Gün")
+        tree.heading("gun", text="Day")
         tree.heading("planlanan", text="Planlanan (saat)")
         tree.heading("yapilan", text="Tamamlanan (saat)")
         tree.column("gun", width=150, anchor="center")
@@ -2288,8 +2288,8 @@ class CoachingApp:
 
         oran = int(round(100 * haftalik_yapilan / haftalik_toplam)) if haftalik_toplam else 0
         ozet_text = (
-            f"Haftalık planlanan çalışma : {haftalik_toplam} saat"
-            f"\nHaftalık tamamlanan çalışma: {haftalik_yapilan} saat"
+            f"Weekly planned study : {haftalik_toplam} hours"
+            f"\nWeekly completed study: {haftalik_yapilan} hours"
             f"\nGenel tamamlama oranı      : %{oran}"
         )
         if en_yogun_gun is not None:
@@ -2405,7 +2405,7 @@ class CoachingApp:
         self._last_auto_text = selected_text
 
     def _varsayilan_otoplan_onerileri(self) -> list[str]:
-        """Öğrenci alanına göre hızlı plan öneri metinleri üretir."""
+        """Build quick auto-plan suggestions based on student track."""
         alan = self._ogrenci_ayt_alani()
         if alan == "EA":
             subject_pairs = [
@@ -2414,14 +2414,14 @@ class CoachingApp:
                 ("TYT", "Sosyal"),
                 ("TYT", "Matematik"),
             ]
-        elif alan == "Sözel":
+        elif alan == "Verbal":
             subject_pairs = [
                 ("TYT", "Turkce"),
                 ("TYT", "Sosyal"),
                 ("TYT", "Cografya"),
                 ("TYT", "Matematik"),
             ]
-        else:  # Sayısal
+        else:  # Science
             subject_pairs = [
                 ("AYT", "Matematik"),
                 ("AYT", "Fizik"),
@@ -2444,7 +2444,7 @@ class CoachingApp:
             return
         gun = (self.gun_combo.get() if self.gun_combo is not None else "").strip()
         if not gun or gun not in gunler:
-            messagebox.showwarning("Uyarı", "Önce bir gün seçmelisin.")
+            messagebox.showwarning("Warning", "Önce bir gün seçmelisin.")
             return
 
         day_program = program.get(gun, {})
@@ -2525,12 +2525,12 @@ class CoachingApp:
 
     def notu_kaydet(self):
         if self.aktif_ogrenci is None:
-            messagebox.showwarning("Uyarı", "Önce bir öğrenci seçmelisin.")
+            messagebox.showwarning("Warning", "Önce bir öğrenci seçmelisin.")
             return
 
         self.aktif_ogrenci_notunu_guncelle()
         self.kaydet_diske()
-        messagebox.showinfo("Bilgi", "Öğrenci notu kaydedildi.")
+        messagebox.showinfo("Info", "Student note saved.")
 
     # ----- TYT / AYT - DERS - KONU SİSTEMİ -----
 
@@ -2585,7 +2585,7 @@ class CoachingApp:
         konu = self.konu_combo.get().strip()
 
         if not tur or not ders or not konu:
-            messagebox.showwarning("Uyarı", "Seviye, ders ve konu seçmelisin.")
+            messagebox.showwarning("Warning", "Seviye, ders ve konu seçmelisin.")
             return
 
         parca = f"{tur} {ders} - {konu}"
@@ -2675,7 +2675,7 @@ class CoachingApp:
             tur = tur_combo.get()
             ad = yeni_ders_entry.get().strip()
             if not ad:
-                messagebox.showwarning("Uyarı", "Ders adı boş olamaz.")
+                messagebox.showwarning("Warning", "Ders adı boş olamaz.")
                 return
             if tur not in KONU_VERISI:
                 KONU_VERISI[tur] = {}
@@ -2692,12 +2692,12 @@ class CoachingApp:
                 idx = ders_listbox.curselection()[0]
                 ders = ders_listbox.get(idx)
             except Exception:
-                messagebox.showwarning("Uyarı", "Önce bir ders seçmelisin.")
+                messagebox.showwarning("Warning", "Önce bir ders seçmelisin.")
                 return
 
             ad = yeni_konu_entry.get().strip()
             if not ad:
-                messagebox.showwarning("Uyarı", "Konu adı boş olamaz.")
+                messagebox.showwarning("Warning", "Konu adı boş olamaz.")
                 return
 
             if tur not in KONU_VERISI:
@@ -2719,13 +2719,13 @@ class CoachingApp:
                 d_idx = ders_listbox.curselection()[0]
                 ders = ders_listbox.get(d_idx)
             except Exception:
-                messagebox.showwarning("Uyarı", "Önce bir ders seçmelisin.")
+                messagebox.showwarning("Warning", "Önce bir ders seçmelisin.")
                 return
             try:
                 k_idx = konu_listbox.curselection()[0]
                 konu = konu_listbox.get(k_idx)
             except Exception:
-                messagebox.showwarning("Uyarı", "Silmek için bir konu seçmelisin.")
+                messagebox.showwarning("Warning", "Silmek için bir konu seçmelisin.")
                 return
 
             if messagebox.askyesno("Onay", f"{ders} dersinden '{konu}' konusunu silmek istiyor musun?"):
@@ -2831,12 +2831,12 @@ class CoachingApp:
         btn_frame.pack(fill="x", pady=(0, 4))
         tk.Button(btn_frame, text="Deneme ekle", command=self.deneme_ekle_penceresi, **self._btn_opts).pack(side="left")
         self.deneme_zaman_combo = ttk.Combobox(
-            btn_frame, values=["Tümü", "Son 30 gün", "Son 3 ay"], state="readonly", width=14
+            btn_frame, values=["All", "Last 30 days", "Last 3 months"], state="readonly", width=14
         )
         self.deneme_zaman_combo.set(self.deneme_zaman_filtre)
         self.deneme_zaman_combo.pack(side="right", padx=(4, 0))
         self.deneme_zaman_combo.bind("<<ComboboxSelected>>", self._deneme_zaman_filtre_degisti)
-        self.deneme_tur_combo = ttk.Combobox(btn_frame, values=["Tümü", "TYT", "AYT"], state="readonly", width=10)
+        self.deneme_tur_combo = ttk.Combobox(btn_frame, values=["All", "TYT", "AYT"], state="readonly", width=10)
         self.deneme_tur_combo.set(self.deneme_tur_filtre)
         self.deneme_tur_combo.pack(side="right")
         self.deneme_tur_combo.bind("<<ComboboxSelected>>", self._deneme_tur_filtre_degisti)
@@ -2868,70 +2868,70 @@ class CoachingApp:
         lbl_font = self._font_label
         entry_opts = {"font": lbl_font, "bg": self._entry_bg}
 
-        # ---- Bölüm: Öğrenci & Hafta ----
-        sec_ogr = ttk.LabelFrame(self.content_frame, text=" Öğrenci & Hafta ", padding=8)
+        # ---- Section: Student & Week ----
+        sec_ogr = ttk.LabelFrame(self.content_frame, text=" Student & Week ", padding=8)
         sec_ogr.grid(row=0, column=0, sticky="ew", **ps)
 
-        tk.Label(sec_ogr, text="Öğrenci Ad Soyad:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=0, column=0, **p, sticky="e")
+        tk.Label(sec_ogr, text="Student Full Name:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=0, column=0, **p, sticky="e")
         self.ogrenci_entry = tk.Entry(sec_ogr, width=26, **entry_opts)
         self.ogrenci_entry.grid(row=0, column=1, **p, sticky="w")
-        ogrenci_btn = tk.Button(sec_ogr, text="Öğrenci Ekle / Seç", command=self.ogrenci_ekle_veya_sec, **self._btn_opts)
+        ogrenci_btn = tk.Button(sec_ogr, text="Add / Select Student", command=self.ogrenci_ekle_veya_sec, **self._btn_opts)
         ogrenci_btn.grid(row=0, column=2, **p, sticky="w")
 
-        tk.Label(sec_ogr, text="Öğrenci alanı:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=1, column=0, **p, sticky="e")
-        self.ogrenci_alan_combo = ttk.Combobox(sec_ogr, values=["Sayısal", "EA", "Sözel"], state="readonly", width=12)
+        tk.Label(sec_ogr, text="Student Track:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=1, column=0, **p, sticky="e")
+        self.ogrenci_alan_combo = ttk.Combobox(sec_ogr, values=["Science", "EA", "Verbal"], state="readonly", width=12)
         self.ogrenci_alan_combo.grid(row=1, column=1, **p, sticky="w")
-        self.ogrenci_alan_combo.set("Sayısal")
+        self.ogrenci_alan_combo.set("Science")
         self.ogrenci_alan_combo.bind("<<ComboboxSelected>>", self.ogrenci_alani_degisti)
 
-        tk.Label(sec_ogr, text="Aktif Öğrenci:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=2, column=0, **p, sticky="e")
+        tk.Label(sec_ogr, text="Active Student:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=2, column=0, **p, sticky="e")
         self.ogrenci_combo = ttk.Combobox(sec_ogr, values=[], state="readonly", width=24)
         self.ogrenci_combo.grid(row=2, column=1, **p, sticky="w")
         self.ogrenci_combo.bind("<<ComboboxSelected>>", self.ogrenci_degisti)
-        dosya_btn = tk.Button(sec_ogr, text="Excel Dosyası Seç", command=self.dosya_sec, **self._btn_opts)
+        dosya_btn = tk.Button(sec_ogr, text="Select Excel File", command=self.dosya_sec, **self._btn_opts)
         dosya_btn.grid(row=2, column=2, **p, sticky="w")
 
-        tk.Label(sec_ogr, text="Hafta:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=3, column=0, **p, sticky="e")
+        tk.Label(sec_ogr, text="Week:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=3, column=0, **p, sticky="e")
         self.hafta_combo = ttk.Combobox(sec_ogr, values=[], state="readonly", width=14)
         self.hafta_combo.grid(row=3, column=1, **p, sticky="w")
         self.hafta_combo.bind("<<ComboboxSelected>>", self.hafta_degisti)
-        yeni_hafta_btn = tk.Button(sec_ogr, text="Yeni Hafta", command=self.yeni_hafta_olustur, **self._btn_opts)
+        yeni_hafta_btn = tk.Button(sec_ogr, text="New Week", command=self.yeni_hafta_olustur, **self._btn_opts)
         yeni_hafta_btn.grid(row=3, column=2, **p, sticky="w")
-        hafta_kopyala_btn = tk.Button(sec_ogr, text="Bu haftayı kopyala", command=self.hafta_kopyala, **self._btn_opts)
+        hafta_kopyala_btn = tk.Button(sec_ogr, text="Copy this week", command=self.hafta_kopyala, **self._btn_opts)
         hafta_kopyala_btn.grid(row=3, column=3, **p, sticky="w")
 
-        self.excel_label = tk.Label(sec_ogr, text="Seçili dosya: (yok)", font=lbl_font, fg=self._label_muted, bg=self._bg)
+        self.excel_label = tk.Label(sec_ogr, text="Selected file: (none)", font=lbl_font, fg=self._label_muted, bg=self._bg)
         self.excel_label.grid(row=4, column=0, columnspan=3, **p, sticky="w")
 
-        tk.Label(sec_ogr, text="Panel rengi:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=5, column=0, **p, sticky="e")
+        tk.Label(sec_ogr, text="Panel theme:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=5, column=0, **p, sticky="e")
         self.theme_combo = ttk.Combobox(sec_ogr, values=THEME_KEYS, state="readonly", width=18)
         self.theme_combo.grid(row=5, column=1, **p, sticky="w")
         self.theme_combo.set(self._current_theme)
         self.theme_combo.bind("<<ComboboxSelected>>", self._tema_degisti)
-        tk.Button(sec_ogr, text="Ayarlar", command=self.ayarlar_penceresi, **self._btn_opts).grid(row=6, column=0, **p, sticky="w")
-        tk.Button(sec_ogr, text="Dışa Aktar", command=self.disa_aktar_json, **self._btn_opts).grid(row=6, column=1, **p, sticky="w")
-        tk.Button(sec_ogr, text="İçe Aktar", command=self.ice_aktar_json, **self._btn_opts).grid(row=6, column=2, **p, sticky="w")
-        tk.Button(sec_ogr, text="Yedekten Dön", command=self.yedekten_don, **self._btn_opts).grid(row=6, column=3, **p, sticky="w")
-        tk.Button(sec_ogr, text="Veriyi Sıfırla", command=self.veriyi_sifirla, **self._btn_opts).grid(row=7, column=0, columnspan=2, **p, sticky="w")
+        tk.Button(sec_ogr, text="Settings", command=self.ayarlar_penceresi, **self._btn_opts).grid(row=6, column=0, **p, sticky="w")
+        tk.Button(sec_ogr, text="Export", command=self.disa_aktar_json, **self._btn_opts).grid(row=6, column=1, **p, sticky="w")
+        tk.Button(sec_ogr, text="Import", command=self.ice_aktar_json, **self._btn_opts).grid(row=6, column=2, **p, sticky="w")
+        tk.Button(sec_ogr, text="Restore Backup", command=self.yedekten_don, **self._btn_opts).grid(row=6, column=3, **p, sticky="w")
+        tk.Button(sec_ogr, text="Reset Data", command=self.veriyi_sifirla, **self._btn_opts).grid(row=7, column=0, columnspan=2, **p, sticky="w")
         self._sec_frames = [sec_ogr]
 
-        # ---- Bölüm: Çizelge girişi ----
-        sec_giris = ttk.LabelFrame(self.content_frame, text=" Çizelge girişi ", padding=8)
+        # ---- Section: Schedule entry ----
+        sec_giris = ttk.LabelFrame(self.content_frame, text=" Schedule Entry ", padding=8)
         sec_giris.grid(row=1, column=0, sticky="ew", **ps)
 
-        tk.Label(sec_giris, text="Gün:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=0, column=0, **p, sticky="e")
+        tk.Label(sec_giris, text="Day:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=0, column=0, **p, sticky="e")
         self.gun_combo = ttk.Combobox(sec_giris, values=gunler, state="readonly")
         self.gun_combo.grid(row=0, column=1, **p, sticky="w")
         self.gun_combo.current(0)
         self.gun_combo.bind("<<ComboboxSelected>>", self.gun_secimi_degisti)
 
-        tk.Label(sec_giris, text="Saat:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=1, column=0, **p, sticky="e")
+        tk.Label(sec_giris, text="Hour:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=1, column=0, **p, sticky="e")
         self.saat_combo = ttk.Combobox(sec_giris, values=saatler, state="readonly")
         self.saat_combo.grid(row=1, column=1, **p, sticky="w")
         self.saat_combo.current(0)
         self.saat_combo.bind("<<ComboboxSelected>>", self.saat_secimi_degisti)
 
-        tk.Label(sec_giris, text="Çoklu Saat:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=1, column=2, **p, sticky="e")
+        tk.Label(sec_giris, text="Multi-Hour:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=1, column=2, **p, sticky="e")
         saat_multi_wrap = ttk.Frame(sec_giris)
         saat_multi_wrap.grid(row=1, column=3, **p, sticky="w")
         self.saat_multi_listbox = tk.Listbox(
@@ -2946,84 +2946,84 @@ class CoachingApp:
         for s in saatler:
             self.saat_multi_listbox.insert(tk.END, s)
 
-        tk.Label(sec_giris, text="Hazır şablon:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=2, column=0, **p, sticky="e")
+        tk.Label(sec_giris, text="Quick template:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=2, column=0, **p, sticky="e")
         self.sablon_combo = ttk.Combobox(sec_giris, values=SABLON_SECIMLERI, state="readonly", width=32)
         self.sablon_combo.grid(row=2, column=1, columnspan=3, **p, sticky="w")
         self.sablon_combo.current(0)
         self.sablon_combo.bind("<<ComboboxSelected>>", self.sablon_secildi)
 
-        tk.Label(sec_giris, text="İçerik / Not:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=3, column=0, **p, sticky="e")
+        tk.Label(sec_giris, text="Content / Note:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=3, column=0, **p, sticky="e")
         self.metin_entry = tk.Entry(sec_giris, width=42, **entry_opts)
         self.metin_entry.grid(row=3, column=1, columnspan=3, **p, sticky="w")
 
-        tk.Label(sec_giris, text="Hızlı öneri:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=4, column=0, **p, sticky="e")
+        tk.Label(sec_giris, text="Quick suggestion:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=4, column=0, **p, sticky="e")
         self.oneri_combo = ttk.Combobox(sec_giris, values=[], state="readonly", width=42)
         self.oneri_combo.grid(row=4, column=1, columnspan=2, **p, sticky="w")
         self.oneri_combo.bind("<<ComboboxSelected>>", lambda e: self.oneri_uygula())
-        self.oneri_btn = tk.Button(sec_giris, text="Öneriyi Uygula", command=self.oneri_uygula, **self._btn_opts)
+        self.oneri_btn = tk.Button(sec_giris, text="Apply Suggestion", command=self.oneri_uygula, **self._btn_opts)
         self.oneri_btn.grid(row=4, column=3, **p, sticky="w")
 
-        tk.Label(sec_giris, text="Yayın:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=5, column=0, **p, sticky="e")
+        tk.Label(sec_giris, text="Source:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=5, column=0, **p, sticky="e")
         self.kaynak_combo = ttk.Combobox(
-            sec_giris, values=["(Yayın seç)"] + KAYNAK_LISTESI, state="readonly", width=42
+            sec_giris, values=["(Select source)"] + KAYNAK_LISTESI, state="readonly", width=42
         )
         self.kaynak_combo.grid(row=5, column=1, columnspan=3, **p, sticky="w")
         self.kaynak_combo.current(0)
         self.kaynak_combo.bind("<<ComboboxSelected>>", self.kaynak_secildi)
 
-        tk.Label(sec_giris, text="Seviye:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=6, column=0, **p, sticky="e")
+        tk.Label(sec_giris, text="Level:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=6, column=0, **p, sticky="e")
         self.sinav_combo = ttk.Combobox(
             sec_giris,
-            values=["TYT", "AYT", "5. Sınıf", "6. Sınıf", "7. Sınıf", "8. Sınıf",
-                    "9. Sınıf", "10. Sınıf", "11. Sınıf", "12. Sınıf"],
+            values=["TYT", "AYT", "5th Grade", "6th Grade", "7th Grade", "8th Grade",
+                    "9th Grade", "10th Grade", "11th Grade", "12th Grade"],
             state="readonly", width=12
         )
         self.sinav_combo.grid(row=6, column=1, **p, sticky="w")
         self.sinav_combo.bind("<<ComboboxSelected>>", self.sinav_degisti)
         self.sinav_combo.set("TYT")
-        konu_yonet_btn = tk.Button(sec_giris, text="Konu Yönetimi", command=self.konu_yonetim_penceresi, **self._btn_opts)
+        konu_yonet_btn = tk.Button(sec_giris, text="Topic Manager", command=self.konu_yonetim_penceresi, **self._btn_opts)
         konu_yonet_btn.grid(row=6, column=2, columnspan=2, **p, sticky="w")
 
-        tk.Label(sec_giris, text="Ders:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=7, column=0, **p, sticky="e")
+        tk.Label(sec_giris, text="Course:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=7, column=0, **p, sticky="e")
         self.ders_combo = ttk.Combobox(sec_giris, values=[], state="readonly", width=20)
         self.ders_combo.grid(row=7, column=1, **p, sticky="w")
         self.ders_combo.bind("<<ComboboxSelected>>", self.ders_degisti)
 
-        tk.Label(sec_giris, text="Konu:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=8, column=0, **p, sticky="e")
+        tk.Label(sec_giris, text="Topic:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=8, column=0, **p, sticky="e")
         self.konu_combo = ttk.Combobox(sec_giris, values=[], state="readonly", width=28)
         self.konu_combo.grid(row=8, column=1, columnspan=3, **p, sticky="w")
         self.konu_combo.bind("<<ComboboxSelected>>", self.konu_secildi)
 
-        self.ekle_btn = tk.Button(sec_giris, text="Ekle / Kaydet", command=self.ekle_kayit, **self._btn_opts)
+        self.ekle_btn = tk.Button(sec_giris, text="Add / Save", command=self.ekle_kayit, **self._btn_opts)
         self.ekle_btn.grid(row=9, column=0, columnspan=4, **p)
 
         self.dokuz_btn = tk.Button(
-            sec_giris, text="Bu saati seçili günlere uygula", command=self.tum_gunlere_ayni_saat_metin, **self._btn_opts
+            sec_giris, text="Apply this hour to selected days", command=self.tum_gunlere_ayni_saat_metin, **self._btn_opts
         )
         self.dokuz_btn.grid(row=10, column=0, columnspan=4, **p)
         self.otoplan_btn = tk.Button(
-            sec_giris, text="Seçili güne otomatik 3 kayıt", command=self.otomatik_plan_ekle, **self._btn_opts
+            sec_giris, text="Auto-add 3 entries to selected day", command=self.otomatik_plan_ekle, **self._btn_opts
         )
         self.otoplan_btn.grid(row=11, column=0, columnspan=4, **p)
 
-        # ---- Bölüm: Kayıt listesi & Dışa aktar ----
-        sec_liste = ttk.LabelFrame(self.content_frame, text=" Kayıt listesi & Dışa aktar ", padding=8)
+        # ---- Section: Entry list & export ----
+        sec_liste = ttk.LabelFrame(self.content_frame, text=" Entry List & Export ", padding=8)
         sec_liste.grid(row=2, column=0, sticky="ew", **ps)
 
         self.liste_filtre_var = tk.StringVar(value="")
         self.sadece_yapilmayan_var = tk.BooleanVar(value=False)
-        tk.Label(sec_liste, text="Listede ara:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=0, column=0, **p, sticky="e")
+        tk.Label(sec_liste, text="Search list:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=0, column=0, **p, sticky="e")
         self.liste_filtre_entry = tk.Entry(sec_liste, width=28, textvariable=self.liste_filtre_var, **entry_opts)
         self.liste_filtre_entry.grid(row=0, column=1, **p, sticky="w")
         self.liste_filtre_entry.bind("<KeyRelease>", self.liste_filtresi_degisti)
         ttk.Checkbutton(
             sec_liste,
-            text="Sadece yapılmayanlar",
+            text="Only incomplete",
             variable=self.sadece_yapilmayan_var,
             command=self.liste_filtresi_degisti,
         ).grid(row=0, column=2, **p, sticky="w")
-        tk.Button(sec_liste, text="Filtreyi temizle", command=self.liste_filtresini_temizle, **self._btn_opts).grid(row=0, column=3, **p, sticky="w")
-        self.liste_sayac_label = tk.Label(sec_liste, text="Gösterilen: 0 / 0", font=lbl_font, bg=self._bg, fg=self._label_muted)
+        tk.Button(sec_liste, text="Clear filter", command=self.liste_filtresini_temizle, **self._btn_opts).grid(row=0, column=3, **p, sticky="w")
+        self.liste_sayac_label = tk.Label(sec_liste, text="Showing: 0 / 0", font=lbl_font, bg=self._bg, fg=self._label_muted)
         self.liste_sayac_label.grid(row=1, column=0, columnspan=4, **p, sticky="w")
 
         liste_wrap = ttk.Frame(sec_liste)
@@ -3044,46 +3044,46 @@ class CoachingApp:
         liste_wrap.columnconfigure(0, weight=1)
         self.listbox.bind("<Double-Button-1>", self.duzenle_kayit)
 
-        self.sil_btn = tk.Button(sec_liste, text="Seçileni Sil", command=self.sil_kayit, **self._btn_opts)
+        self.sil_btn = tk.Button(sec_liste, text="Delete selected", command=self.sil_kayit, **self._btn_opts)
         self.sil_btn.grid(row=3, column=0, **p, sticky="e")
-        self.duzenle_btn = tk.Button(sec_liste, text="Seçileni Düzenle", command=self.duzenle_kayit, **self._btn_opts)
+        self.duzenle_btn = tk.Button(sec_liste, text="Edit selected", command=self.duzenle_kayit, **self._btn_opts)
         self.duzenle_btn.grid(row=3, column=1, **p, sticky="w")
-        self.yapildi_btn = tk.Button(sec_liste, text="Yapıldı / Yapılmadı", command=self.tamamlandi_degistir, **self._btn_opts)
+        self.yapildi_btn = tk.Button(sec_liste, text="Toggle done", command=self.tamamlandi_degistir, **self._btn_opts)
         self.yapildi_btn.grid(row=3, column=2, **p, sticky="w")
-        self.temizle_btn = tk.Button(sec_liste, text="Çizelgeyi Temizle", command=self.cizelgeyi_temizle, **self._btn_opts)
+        self.temizle_btn = tk.Button(sec_liste, text="Clear schedule", command=self.cizelgeyi_temizle, **self._btn_opts)
         self.temizle_btn.grid(row=3, column=3, **p, sticky="w")
 
-        self.excel_btn = tk.Button(sec_liste, text="Excel'e Yaz", command=self.excel_yaz, **self._btn_opts)
+        self.excel_btn = tk.Button(sec_liste, text="Write to Excel", command=self.excel_yaz, **self._btn_opts)
         self.excel_btn.grid(row=4, column=0, **p, sticky="e")
-        self.pdf_btn = tk.Button(sec_liste, text="PDF'ye Aktar", command=self.pdf_aktar, **self._btn_opts)
+        self.pdf_btn = tk.Button(sec_liste, text="Export to PDF", command=self.pdf_aktar, **self._btn_opts)
         self.pdf_btn.grid(row=4, column=1, **p, sticky="w")
-        self.ozet_btn = tk.Button(sec_liste, text="Boş Saatler + Günlük Toplam", command=self.program_ozeti, **self._btn_opts)
+        self.ozet_btn = tk.Button(sec_liste, text="Free Hours + Daily Totals", command=self.program_ozeti, **self._btn_opts)
         self.ozet_btn.grid(row=4, column=2, **p, sticky="w")
-        self.istatistik_btn = tk.Button(sec_liste, text="İstatistik Ekranı", command=self.istatistik_penceresi, **self._btn_opts)
+        self.istatistik_btn = tk.Button(sec_liste, text="Statistics View", command=self.istatistik_penceresi, **self._btn_opts)
         self.istatistik_btn.grid(row=4, column=3, **p, sticky="w")
 
-        # ---- Bölüm: Haftalık tablo ----
-        sec_tablo = ttk.LabelFrame(self.content_frame, text=" Haftalık tablo özeti ", padding=8)
+        # ---- Section: Weekly table ----
+        sec_tablo = ttk.LabelFrame(self.content_frame, text=" Weekly Table Summary ", padding=8)
         sec_tablo.grid(row=3, column=0, sticky="ew", **ps)
 
-        kolonlar = ["Saat"] + gunler
+        kolonlar = ["Hour"] + gunler
         self.tablo_tree = ttk.Treeview(sec_tablo, columns=kolonlar, show="headings", height=len(saatler) + 1)
         for col in kolonlar:
             self.tablo_tree.heading(col, text=col)
-            if col == "Saat":
+            if col == "Hour":
                 self.tablo_tree.column(col, width=70, anchor="center")
             else:
                 self.tablo_tree.column(col, width=140, anchor="center")
         self.tablo_tree.grid(row=0, column=0, **p, sticky="ew")
 
-        # ---- Bölüm: Öğrenci notları ----
-        sec_not = ttk.LabelFrame(self.content_frame, text=" Öğrenci notları ", padding=8)
+        # ---- Section: Student notes ----
+        sec_not = ttk.LabelFrame(self.content_frame, text=" Student Notes ", padding=8)
         sec_not.grid(row=4, column=0, sticky="ew", **ps)
 
-        tk.Label(sec_not, text="Notlar:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=0, column=0, **p, sticky="nw")
+        tk.Label(sec_not, text="Notes:", font=lbl_font, bg=self._bg, fg=self._fg).grid(row=0, column=0, **p, sticky="nw")
         self.ogrenci_not_text = tk.Text(sec_not, width=62, height=4, font=lbl_font, bg=self._entry_bg, wrap="word")
         self.ogrenci_not_text.grid(row=0, column=1, **p, sticky="w")
-        self.not_kaydet_btn = tk.Button(sec_not, text="Notu Kaydet", command=self.notu_kaydet, **self._btn_opts)
+        self.not_kaydet_btn = tk.Button(sec_not, text="Save Note", command=self.notu_kaydet, **self._btn_opts)
         self.not_kaydet_btn.grid(row=0, column=2, **p, sticky="nw")
 
         self._sec_frames.extend([sec_giris, sec_liste, sec_tablo, sec_not])
@@ -3098,23 +3098,23 @@ class CoachingApp:
             self._lock_combobox_wheel(cb)
 
     def ayarlar_penceresi(self):
-        """Font yolu, Excel sayfa adı ve tema ayarlarını düzenle."""
+        """Edit font path, sheet name and theme settings."""
         st = load_settings(_SCRIPT_DIR)
         win = tk.Toplevel(self.root)
-        win.title("Ayarlar")
+        win.title("Settings")
         win.transient(self.root)
 
-        tk.Label(win, text="PDF font dosyası:", font=self._font_label).grid(row=0, column=0, padx=10, pady=8, sticky="e")
+        tk.Label(win, text="PDF font file:", font=self._font_label).grid(row=0, column=0, padx=10, pady=8, sticky="e")
         font_entry = tk.Entry(win, width=45, font=self._font_label)
         font_entry.insert(0, st.get("pdf_font_path", ""))
         font_entry.grid(row=0, column=1, padx=10, pady=8, sticky="w")
 
-        tk.Label(win, text="Excel sayfa adı:", font=self._font_label).grid(row=1, column=0, padx=10, pady=8, sticky="e")
+        tk.Label(win, text="Excel sheet name:", font=self._font_label).grid(row=1, column=0, padx=10, pady=8, sticky="e")
         sheet_entry = tk.Entry(win, width=30, font=self._font_label)
         sheet_entry.insert(0, st.get("excel_sheet_name", ""))
         sheet_entry.grid(row=1, column=1, padx=10, pady=8, sticky="w")
 
-        tk.Label(win, text="Panel rengi (tema):", font=self._font_label).grid(row=2, column=0, padx=10, pady=8, sticky="e")
+        tk.Label(win, text="Panel theme:", font=self._font_label).grid(row=2, column=0, padx=10, pady=8, sticky="e")
         tema_combo = ttk.Combobox(win, values=THEME_KEYS, state="readonly", width=22)
         tema_combo.set(st.get("theme", THEME_KEYS[0]))
         tema_combo.grid(row=2, column=1, padx=10, pady=8, sticky="w")
@@ -3133,10 +3133,10 @@ class CoachingApp:
                 self.theme_combo.set(new_st["theme"])
                 self._apply_theme(new_st["theme"])
             win.destroy()
-            messagebox.showinfo("Ayarlar", "Ayarlar kaydedildi.", parent=self.root)
+            messagebox.showinfo("Settings", "Settings saved.", parent=self.root)
 
-        tk.Button(win, text="Kaydet", command=kaydet, **self._btn_opts).grid(row=3, column=0, padx=10, pady=10, sticky="e")
-        tk.Button(win, text="İptal", command=win.destroy, **self._btn_opts).grid(row=3, column=1, padx=5, pady=10, sticky="w")
+        tk.Button(win, text="Save", command=kaydet, **self._btn_opts).grid(row=3, column=0, padx=10, pady=10, sticky="e")
+        tk.Button(win, text="Cancel", command=win.destroy, **self._btn_opts).grid(row=3, column=1, padx=5, pady=10, sticky="w")
 
     def _tema_degisti(self, event=None):
         """Panel rengi seçildi; ayarı kaydet ve arayüzü güncelle."""

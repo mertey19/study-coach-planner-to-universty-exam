@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""JSON kalıcı kayıt: öğrenciler, haftalar, program, öğrenci notları, konu verisi."""
+"""JSON persistence for students, weeks, plans, notes and topics."""
 
 import json
 import os
@@ -17,9 +17,28 @@ _TIME_ALIASES = {
     "9:00": "09:00",
 }
 
+_DAY_ALIASES = {
+    "Pazartesi": "Monday",
+    "Salı": "Tuesday",
+    "Çarşamba": "Wednesday",
+    "Perşembe": "Thursday",
+    "Cuma": "Friday",
+    "Cumartesi": "Saturday",
+    "Pazar": "Sunday",
+}
+
+
+def _normalize_week_label(label: Any) -> str:
+    text = str(label).strip()
+    lower = text.lower()
+    if lower.startswith("hafta "):
+        suffix = text.split(" ", 1)[1] if " " in text else ""
+        return f"Week {suffix}".strip()
+    return text
+
 
 def _normalize_hour_label(label: Any) -> str:
-    """Saat etiketini HH:MM formatına çevirir (örn. 9:00 -> 09:00)."""
+    """Convert hour labels to HH:MM format (e.g. 9:00 -> 09:00)."""
     s = str(label)
     parca = s.split(":")
     if len(parca) == 2 and parca[0].isdigit() and parca[1].isdigit():
@@ -28,7 +47,7 @@ def _normalize_hour_label(label: Any) -> str:
 
 
 def _normalize_entry(entry: Any) -> Dict[str, Any]:
-    """Kayıt değerini {text, done} formatına getirir (eski string formatı uyumlu)."""
+    """Normalize entry to {text, done} format (legacy string compatible)."""
     if isinstance(entry, dict):
         return {"text": str(entry.get("text", "")), "done": bool(entry.get("done", False))}
     if entry is None:
@@ -37,7 +56,12 @@ def _normalize_entry(entry: Any) -> Dict[str, Any]:
 
 
 def _normalize_program(program: Dict[str, Any]) -> None:
-    """Bir haftanın programını normalize eder: her gün/saat -> {text, done}."""
+    """Normalize one weekly plan as day/hour -> {text, done}."""
+    for old_day, new_day in _DAY_ALIASES.items():
+        if old_day in program and new_day not in program and isinstance(program.get(old_day), dict):
+            program[new_day] = program.get(old_day, {})
+        if old_day in program:
+            del program[old_day]
     for gun in GUNLER:
         gun_prog = program.get(gun)
         if gun_prog is None:
@@ -58,18 +82,22 @@ def _normalize_program(program: Dict[str, Any]) -> None:
 
 
 def _normalize_tum_programlar(ogrenciler: Dict[str, Any]) -> None:
-    """Tüm öğrencilerin tüm haftalarındaki programları normalize eder. Eski yapıyı haftalı yapıya çevirir."""
+    """Normalize all student plans and migrate legacy structures."""
     for ad, val in list(ogrenciler.items()):
         gun_anahtarlari = [k for k in val.keys() if k in GUNLER]
         if gun_anahtarlari:
-            # Eski: direkt günler var -> "Hafta 1" altına taşı
+            # Legacy format: root-level day keys -> nest under Week 1
             eski_program = {g: val.get(g, {}) for g in GUNLER}
             _normalize_program(eski_program)
-            ogrenciler[ad] = {"Hafta 1": eski_program}
+            ogrenciler[ad] = {"Week 1": eski_program}
         else:
+            normalized_weeks: Dict[str, Any] = {}
             for hafta_adi, program in val.items():
+                normalized_name = _normalize_week_label(hafta_adi)
                 if isinstance(program, dict):
                     _normalize_program(program)
+                    normalized_weeks[normalized_name] = program
+            ogrenciler[ad] = normalized_weeks
 
 
 class JsonStorage:

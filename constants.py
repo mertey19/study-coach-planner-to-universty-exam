@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
-"""Uygulama sabitleri: gün/saat eşlemesi, şablonlar, yayın listesi, dosya adları."""
+"""Application constants: day/hour mapping and defaults."""
 
 # ---- Dosya ----
 JSON_DOSYA = "program_kayitlari.json"
-SAYFA_ADI = "Koçluk Çizelgesi"
+SAYFA_ADI = "Coaching Schedule"
 
 # ---- Excel grid: gün -> sütun, saat -> satır ----
 DAY_TO_COL = {
-    "Pazartesi": 2,
-    "Salı": 3,
-    "Çarşamba": 4,
-    "Perşembe": 5,
-    "Cuma": 6,
-    "Cumartesi": 7,
-    "Pazar": 8,
+    "Monday": 2,
+    "Tuesday": 3,
+    "Wednesday": 4,
+    "Thursday": 5,
+    "Friday": 6,
+    "Saturday": 7,
+    "Sunday": 8,
 }
 COL_TO_DAY = {v: k for k, v in DAY_TO_COL.items()}
 
@@ -48,38 +48,38 @@ ROW_TO_TIME = {v: k for k, v in TIME_TO_ROW.items()}
 GUNLER = list(DAY_TO_COL.keys())
 SAATLER = list(TIME_TO_ROW.keys())
 
-# ---- Şablonlar ----
+# ---- Templates ----
 HAZIR_METINLER = {
-    "TYT Paragraf": "20 paragraf çalışması",
-    "TYT Matematik": "TYT Mat Soru Çözümü",
-    "AYT Fizik": "AYT Fizik Konu Tekrarı",
-    "Genel Tekrar": "Genel tekrar & önceki sorular",
-    "dinlenme": "Boş aktivite",
-    "Okul zamanı": "Okul zamanı",
+    "TYT Paragraph": "20 paragraph practice",
+    "TYT Math": "TYT math problem solving",
+    "AYT Physics": "AYT physics topic review",
+    "General Review": "General review and previous questions",
+    "Rest": "Break activity",
+    "School time": "School time",
 }
-SABLON_SECIMLERI = ["(Şablon seç)"] + list(HAZIR_METINLER.keys())
-DEFAULT_9_TEXT = "20 paragraf 20 problem"
+SABLON_SECIMLERI = ["(Select template)"] + list(HAZIR_METINLER.keys())
+DEFAULT_9_TEXT = "20 paragraphs 20 problems"
 
-# ---- Yayın (kaynak) listesi ----
+# ---- Source list ----
 KAYNAK_LISTESI = [
-    "Üç Dört Beş Yayınları",
-    "Marka Yayınları",
-    "Limit Yayınları",
-    "3D Yayınları",
-    "Bilgi Sarmalı Yayınları",
-    "Biyotiği Yayınları",
-    "Aydın Yayınları",
-    "Orbital Yayınları",
-    "4K Yayınları",
-    "Toprak Yayınları",
-    "Endemik Yayınları",
+    "Uc Dort Bes",
+    "Marka",
+    "Limit",
+    "3D",
+    "Bilgi Sarmali",
+    "Biyotigi",
+    "Aydin",
+    "Orbital",
+    "4K",
+    "Toprak",
+    "Endemik",
 ]
 
-# ---- Seviye (sınav / sınıf) combo ----
+# ---- Level (exam/grade) combo ----
 SINAV_SECIMLERI = [
     "TYT", "AYT",
-    "5. Sınıf", "6. Sınıf", "7. Sınıf", "8. Sınıf",
-    "9. Sınıf", "10. Sınıf", "11. Sınıf", "12. Sınıf",
+    "5th Grade", "6th Grade", "7th Grade", "8th Grade",
+    "9th Grade", "10th Grade", "11th Grade", "12th Grade",
 ]
 
 # ---- PDF font (Windows) ----
